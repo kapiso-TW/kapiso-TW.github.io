@@ -1,40 +1,24 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>密碼保護網站</title>
+    <link rel="stylesheet" href="render.css">
+    <title>A Page?</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h1>請輸入密碼進入網站</h1>
-    <form id="passwordForm">
-        <input type="password" id="password" placeholder="輸入密碼" required>
-        <button type="submit">登入</button>
-    </form>
-    <div id="message"></div>
-
-    <script>
-        document.getElementById("passwordForm").addEventListener("submit", async function(event) {
-            event.preventDefault(); 
-            const password = document.getElementById("password").value;
-
-            // 發送密碼到伺服器進行驗證
-            const response = await fetch('/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ password })
-            });
-
-            const message = document.getElementById("message");
-            if (response.ok) {
-                message.innerText = "登入成功！";
-                // 可以在這裡加載受保護的內容
-            } else {
-                message.innerText = "密碼錯誤，請重新嘗試。";
-            }
-        });
-    </script>
+    <div class="stars"></div>
+    <div id="lock-screen" class="container active lock">
+        <h1 style="color: #888282;">Enter Password</h1>
+        <input type="password" id="password" style="background-color: #bdbcbc;" placeholder="Your birthday(4 words)">
+        <button onclick="unlock()">Unlock</button>
+        <p id="error-message" style="color:red; display:none; font-size: 20px;">Incorrect password >< </p>
+    </div>
+    <div id="content" class="container unlock">
+        <h1 style="color: #888282;">Welcome to the protected content!</h1>
+        <p style="color: #888282;">This is the hidden content that only displays after the correct password is entered.</p>
+    </div>
+    <script src="render.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ body {
 #lock-screen.active {
     display: block;
 }
- 
+
 #content.active {
     display: block;
 }
