@@ -10,8 +10,12 @@
 <body>
     <div class="stars"></div>
     <div id="lock-screen" class="container active lock">
-        <h1 style="color: #888282;">Enter Password</h1>
-        <input type="password" id="password" style="background-color: #bdbcbc;" placeholder="Your birthday(4 words)">
+        <div class="form-control">
+            <input type="password" required="" id="password">
+            <label>
+                <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">w</span><span style="transition-delay:250ms">o</span><span style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
+            </label>
+        </div>
         <button onclick="unlock()">Unlock</button>
         <p id="error-message" style="color:red; display:none; font-size: 20px;">Incorrect password >< </p>
     </div>
