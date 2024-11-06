@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = './messages.json';
 
 // 初始化 WebSocket 服务器
-const server = new WebSocket.Server({ port: 7000 });
-console.log("WebSocket server is running on https://localhost:7000");
+const server = new WebSocket.Server({ port: 3000 });
+console.log("WebSocket server is running on ws://localhost:3000");
 
 // 读取消息文件并解析成数组
 function loadMessages() {
