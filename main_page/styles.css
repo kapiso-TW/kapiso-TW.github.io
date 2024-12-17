@@ -1,24 +1,91 @@
-body{
-    background-color: #EEE8AA;
+/*div {
+    outline: 2px solid red;
 }
-.blogbg{
-    background-color: bisque;
+
+p {
+    outline: 2px solid red;
+}
+
+img {
+    outline: 2px solid red;
+}*/
+
+
+
+
+body {
+    background-color: #1E2A38;
+    font-family: Arial, sans-serif;
+}
+
+.bloginfo {
+    padding: 5px;
+    background-color: #3B5B7E;
     border-radius: 10%;
-}
-.blogicon{
+    width: 150px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 10px;
+    justify-content: center;
+    flex-direction: column;
 }
-.blog{
+
+.kapiso {
+    height: 100px;
+    padding: 5px 0 0 0;
+    border-radius: 20%;
+}
+
+.blog {
     display: contents;
 
 }
-.outline{
+
+.outline {
     width: 106px;
 }
-.photo{
-   width: 90px;
-   margin-right: -98px;
-} 
+
+.photo {
+    width: 90px;
+    margin-right: -98px;
+}
+
+.px25 {
+    width: 25px;
+    height: 5px;
+    background-color: white;
+}
+
+p{
+    color: #E0E0E0;
+}
+
+
+/* From Uiverse.io by kamehame-ha */ 
+.github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px;
+    background-color: #181717;
+    outline: 3px #181717 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  
+  .github svg path {
+    transition: 400ms;
+  }
+  
+  .github:hover {
+    background-color: transparent;
+    color: #181717;
+  }
+  
+  .github:hover svg path {
+    fill: #181717;
+  }
