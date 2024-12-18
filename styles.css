@@ -1,0 +1,133 @@
+/*div {
+    outline: 2px solid red;
+}
+
+p {
+    outline: 2px solid red;
+}
+
+img {
+    outline: 2px solid red;
+}*/
+
+
+
+
+body {
+    background-color: #1E2A38;
+    font-family: Arial, sans-serif;
+}
+
+.bloginfo {
+    padding: 5px;
+    background-color: #3B5B7E;
+    border-radius: 10%;
+    width: 150px;
+    flex-direction: column;
+}
+
+.topinfo {
+    padding: 10px;
+    gap: 20px;
+    background-color: #3B5B7E;
+    z-index: -1;
+    align-items: center;
+}
+
+.kapiso {
+    height: 100px;
+    padding: 5px 0 0 0;
+    border-radius: 20%;
+}
+
+p {
+    color: #E0E0E0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+/* From Uiverse.io by kamehame-ha */
+.github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px;
+    background-color: #181717;
+    outline: 3px #181717 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.github svg path {
+    transition: 400ms;
+}
+
+.github:hover {
+    background-color: transparent;
+    color: #181717;
+}
+
+.github:hover svg path {
+    fill: #181717;
+}
+
+/* From Uiverse.io by joe-watson-sbf */
+.btn {
+    z-index: 1;
+    font-size: 12px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #ffedd3;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #FFC107;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    color: #1e1e2b;
+    transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffc506;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+.btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}
