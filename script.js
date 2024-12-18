@@ -1,8 +1,6 @@
 function navigateTo(url) {
-    // 更新網址
     window.history.pushState({}, '', url);
 
-    // 更新頁面內容（模擬路由切換）
     const content = document.getElementById('content');
     if (url === '/about') {
         content.innerHTML = `
@@ -40,18 +38,13 @@ function navigateTo(url) {
     }
 }
 
-// 處理瀏覽器的回退事件
 window.onpopstate = function () {
     navigateTo(window.location.pathname);
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-    // 解析原始路徑
     const urlParams = new URLSearchParams(window.location.search);
     const redirectedPath = urlParams.get('redirect'); 
     console.log(redirectedPath);
     navigateTo(redirectedPath);
-    //if (pathname.startsWith('/?')) {
-    //const newPath = pathname.substring(2)
-    //}
 });
