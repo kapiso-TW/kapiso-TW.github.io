@@ -45,8 +45,9 @@ window.onpopstate = function () {
     navigateTo(window.location.pathname);
 };
 
-window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const redirectedPath = urlParams.get('redirect');
-    navigateTo(redirectedPath);
-}
+window.addEventListener("DOMContentLoaded", () => {
+    // 解析原始路徑
+    const originalPath = new URLSearchParams(window.location.search).get('/');
+    navigateTo(originalPath);
+  });
+  
