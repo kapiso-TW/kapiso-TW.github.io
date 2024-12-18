@@ -55,6 +55,9 @@ p {
     .postdiv {
         flex-direction: column;
     }
+    .bloginfo{
+        margin: 0 auto;
+    }
 }
 
 .pp {
