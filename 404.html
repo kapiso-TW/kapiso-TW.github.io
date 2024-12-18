@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    // 將用戶重定向到根頁面，並保留原始路徑
+    const pathname = window.location.pathname;
+    window.location.replace('/?' + pathname);
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
