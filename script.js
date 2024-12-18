@@ -6,14 +6,12 @@ function navigateTo(url) {
     const content = document.getElementById('content');
     if (url === '/about') {
         content.innerHTML = `
-            <h1>關於我們</h1>
-            <button onclick="navigateTo('/')">返回首頁</button>
+            <p>about</p>
         `;
         history.pushState({page: 1}, "New Page", "/about");
     } else if(url === '/archive') {
         content.innerHTML = `
-            <h1>首頁</h1>
-            <button onclick="navigateTo('/about')">跳轉到關於我們</button>
+            <p>archive</p>
         `;
         history.pushState({page: 1}, "New Page", "/archive");
     } else if(url === '..'){
