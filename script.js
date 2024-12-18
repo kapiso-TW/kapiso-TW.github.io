@@ -49,6 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // 解析原始路徑
     const originalPath = new URLSearchParams(window.location.search).get('/');
     const pathname = window.location.pathname;
+    console.log(pathname);
     navigateTo(originalPath);
     if (pathname.startsWith('/?')) {
         const newPath = pathname.substring(2)
