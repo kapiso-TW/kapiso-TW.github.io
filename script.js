@@ -8,13 +8,13 @@ function navigateTo(url) {
         content.innerHTML = `
             <p>about</p>
         `;
-        history.pushState({page: 1}, "New Page", "/about");
-    } else if(url === '/archive') {
+        history.pushState({ page: 1 }, "New Page", "/about");
+    } else if (url === '/archive') {
         content.innerHTML = `
             <p>archive</p>
         `;
-        history.pushState({page: 1}, "New Page", "/archive");
-    } else if(url === '/'){
+        history.pushState({ page: 1 }, "New Page", "/archive");
+    } else if (url === '/') {
         content.innerHTML = `
             <div class="pp">
                     <p>test1------------------------------------------------------------------------------------ </p>
@@ -36,7 +36,7 @@ function navigateTo(url) {
                     <p>test5</p>
                 </div>
         `;
-        history.pushState({page: 1}, "New Page", "/");
+        history.pushState({ page: 1 }, "New Page", "/");
     }
 }
 
@@ -48,11 +48,10 @@ window.onpopstate = function () {
 window.addEventListener("DOMContentLoaded", () => {
     // 解析原始路徑
     const urlParams = new URLSearchParams(window.location.search);
-    const redirectedPath = urlParams.substring(1);
+    const redirectedPath = urlParams.get('redirect'); 
     console.log(redirectedPath);
     navigateTo(redirectedPath);
     //if (pathname.startsWith('/?')) {
-        //const newPath = pathname.substring(2)
+    //const newPath = pathname.substring(2)
     //}
-  });
-  
+});
