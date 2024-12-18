@@ -1,0 +1,7 @@
+背景色 (Background)：#1E2A38 (深藍灰色)
+主色 (Primary)：#4A90E2 (柔和天藍色，作為亮眼重點)
+輔助色 (Secondary)：#3B5B7E (中間調的藍灰色)
+文字色 (Text)：#E0E0E0 (淡灰白，提升文字可讀性)
+強調色 (Accent)：#FFC107 (金黃色，按鈕或重要標題點綴用)
+
+<div class="container" style="width: 90%; height: 20px; background-color:#3B5B7E;">

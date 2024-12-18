@@ -21,23 +21,25 @@ body {
 .bloginfo {
     padding: 5px;
     background-color: #3B5B7E;
-    border-radius: 10%;
+    border-radius: 20px;
     width: 150px;
     flex-direction: column;
 }
 
 .topinfo {
-    padding: 10px;
+    padding: 10px 5px 10px 5px;
     gap: 20px;
     background-color: #3B5B7E;
     z-index: -1;
     align-items: center;
+    height: 37px;
+    border-radius: 0 0 20px 20px;
 }
 
 .kapiso {
     height: 100px;
     padding: 5px 0 0 0;
-    border-radius: 20%;
+    border-radius: 20px;
 }
 
 p {
@@ -47,6 +49,21 @@ p {
 .container {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 300px) {
+    .postdiv {
+        flex-direction: column;
+    }
+}
+
+.pp {
+    width: auto;
+    background-color: #3B5B7E;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: calc(100% - 10px);
+    border-radius: 20px;
 }
 
 /* From Uiverse.io by kamehame-ha */
@@ -130,4 +147,10 @@ p {
     height: 100%;
     transition-delay: 0.4s;
     color: aliceblue;
+}
+
+@media (max-width: 370px) {
+    .btn {
+        display: none;
+    }
 }
