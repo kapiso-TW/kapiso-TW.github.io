@@ -22,7 +22,7 @@ body {
     padding: 5px;
     background-color: #3B5B7E;
     border-radius: 20px;
-    width: 150px;
+    width: 180px;
     flex-direction: column;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .kapiso {
-    height: 100px;
+    height: 160px;
     padding: 5px 0 0 0;
     border-radius: 20px;
 }
@@ -51,7 +51,7 @@ p {
     justify-content: center;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 320px) {
     .postdiv {
         flex-direction: column;
     }
