@@ -48,7 +48,7 @@ window.onpopstate = function () {
 window.addEventListener("DOMContentLoaded", () => {
     // 解析原始路徑
     const urlParams = new URLSearchParams(window.location.search);
-    const redirectedPath = urlParams.substring(1);;
+    const redirectedPath = urlParams.substring(1);
     console.log(redirectedPath);
     navigateTo(redirectedPath);
     //if (pathname.startsWith('/?')) {
