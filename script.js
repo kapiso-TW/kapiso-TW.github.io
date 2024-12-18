@@ -50,6 +50,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const originalPath = new URLSearchParams(window.location.search).get('/');
     const pathname = window.location.pathname;
     console.log(pathname);
+    console.log(originalPath);
     navigateTo(originalPath);
     if (pathname.startsWith('/?')) {
         const newPath = pathname.substring(2)
