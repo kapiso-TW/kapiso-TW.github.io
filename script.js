@@ -14,7 +14,7 @@ function navigateTo(url) {
             <p>archive</p>
         `;
         history.pushState({page: 1}, "New Page", "/archive");
-    } else if(url === '..'){
+    } else if(url === '/'){
         content.innerHTML = `
             <div class="pp">
                     <p>test1------------------------------------------------------------------------------------ </p>
@@ -44,3 +44,9 @@ function navigateTo(url) {
 window.onpopstate = function () {
     navigateTo(window.location.pathname);
 };
+
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectedPath = urlParams.get('redirect');
+    navigateTo(redirectedPath);
+}
