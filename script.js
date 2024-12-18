@@ -47,13 +47,12 @@ window.onpopstate = function () {
 
 window.addEventListener("DOMContentLoaded", () => {
     // 解析原始路徑
-    const originalPath = new URLSearchParams(window.location.search).get('/');
-    const pathname = window.location.pathname;
-    console.log(pathname);
-    console.log(originalPath);
-    navigateTo(originalPath);
-    if (pathname.startsWith('/?')) {
-        const newPath = pathname.substring(2)
-    }
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectedPath = urlParams.get('redirect');
+    console.log(redirectedPath);
+    navigateTo(redirectedPath);
+    //if (pathname.startsWith('/?')) {
+        //const newPath = pathname.substring(2)
+    //}
   });
   
