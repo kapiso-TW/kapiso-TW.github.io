@@ -190,6 +190,7 @@ li{
     font-size: 30px;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
     animation: animate8345 9s linear infinite;
     font-weight: bold;
   }
