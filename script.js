@@ -67,23 +67,23 @@ function navigateTo(url) {
     } else if (url === '/') {
         content.innerHTML = `
             <div class="pp">
-                    <p>test1---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- </p>
+                    <p>Devloping...</p>
                 </div>
 
                 <div class="pp">
-                    <p>test2</p>
+                    <p>Devloping...</p>
                 </div>
 
                 <div class="pp">
-                    <p>test3</p>
+                    <p>Devloping...</p>
                 </div class="pp">
 
                 <div class="pp">
-                    <p>test4</p>
+                    <p>Devloping...</p>
                 </div class="pp">
 
                 <div class="pp">
-                    <p>test5</p>
+                    <p>Devloping...</p>
                 </div>
         `;
         history.pushState({ page: 1 }, "New Page", "/");

@@ -56,7 +56,8 @@ p {
     .postdiv {
         flex-direction: column;
     }
-    .bloginfo{
+
+    .bloginfo {
         margin: 0 auto;
     }
 }
@@ -70,17 +71,17 @@ p {
     border-radius: 20px;
 }
 
-.about{
+.about {
     background-color: #3B5B7E;
     border-radius: 20px;
 }
 
-.about-text{
+.about-text {
     padding: 1px 30px 1px 30px;
     gap: 5px;
 }
 
-li{
+li {
     color: #bcb9b9;
 }
 
@@ -115,76 +116,50 @@ li{
     fill: #181717;
 }
 
-/* From Uiverse.io by joe-watson-sbf */
+/* From Uiverse.io by biswacpcode */
 .btn {
-    z-index: 1;
-    font-size: 12px;
-    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
     border: none;
-    padding: 1em 1.5em;
-    color: #ffedd3;
-    text-transform: uppercase;
-    position: relative;
-    transition: 0.5s ease;
-    cursor: pointer;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    margin-left: auto;
+}
+
+.btn::after,
+.btn::before {
+    content: '';
+    width: 0%;
     height: 2px;
-    width: 0;
-    background-color: #FFC107;
-    transition: 0.5s ease;
+    background: #FFC107;
+    display: block;
+    transition: 0.5s;
 }
 
-.btn:hover {
-    color: #1e1e2b;
-    transition-delay: 0.5s;
-}
-
+.btn:hover::after,
 .btn:hover::before {
     width: 100%;
 }
 
-.btn::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 0;
-    width: 100%;
-    background-color: #ffc506;
-    transition: 0.4s ease;
-    z-index: -1;
-}
-
-.btn:hover::after {
-    height: 100%;
-    transition-delay: 0.4s;
-    color: aliceblue;
-}
-
-@media (max-width: 370px) {
-    .btn {
-        display: none;
-    }
-}
-
-/* From Uiverse.io by omar-alghaish */ 
+/* From Uiverse.io by omar-alghaish */
 @keyframes animate8345 {
-    0%,100% {
-      filter: hue-rotate(0deg);
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
     }
-  
+
     50% {
-      filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
     }
-  }
-  
-  .loader {
+}
+
+.loader {
     color: rgb(0, 0, 0);
     background: linear-gradient(to right, #2d60ec, #3ccfda);
     font-size: 30px;
@@ -193,4 +168,4 @@ li{
     background-clip: text;
     animation: animate8345 9s linear infinite;
     font-weight: bold;
-  }
+}
