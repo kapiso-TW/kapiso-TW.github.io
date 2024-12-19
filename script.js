@@ -2,6 +2,10 @@ function navigateTo(url) {
     window.history.pushState({}, '', url);
 
     const content = document.getElementById('content');
+    content.innerHTML = `
+        <br><br><br>
+        <div class="loader container">loading...</div>
+`;
     if (url === '/about') {
         content.innerHTML = `
             <div class="about">
@@ -83,6 +87,8 @@ function navigateTo(url) {
                 </div>
         `;
         history.pushState({ page: 1 }, "New Page", "/");
+    } else{
+        location.href = 'https://kapiso-tw.github.io/';
     }
 }
 
@@ -93,6 +99,12 @@ window.onpopstate = function () {
 window.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const redirectedPath = urlParams.get('redirect');
-    console.log(redirectedPath);
-    navigateTo(redirectedPath);
+    if (redirectedPath && redirectedPath.trim() !== '') {
+        console.log(redirectedPath);
+        navigateTo(redirectedPath);
+    } else {
+        console.log('No redirected path');
+        navigateTo('/')
+    }
+
 });
