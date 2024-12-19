@@ -16,6 +16,7 @@ img {
 body {
     background-color: #1E2A38;
     font-family: Arial, sans-serif;
+    color: #E0E0E0;
 }
 
 .bloginfo {
@@ -62,11 +63,25 @@ p {
 
 .pp {
     width: auto;
-    background-color: #3B5B7E;
+    background-color: #3b5b7e;
     padding: 10px;
     margin-bottom: 15px;
     width: calc(100% - 10px);
     border-radius: 20px;
+}
+
+.about{
+    background-color: #3B5B7E;
+    border-radius: 20px;
+}
+
+.about-text{
+    padding: 1px 30px 1px 30px;
+    gap: 5px;
+}
+
+li{
+    color: #bcb9b9;
 }
 
 /* From Uiverse.io by kamehame-ha */

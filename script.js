@@ -4,7 +4,55 @@ function navigateTo(url) {
     const content = document.getElementById('content');
     if (url === '/about') {
         content.innerHTML = `
-            <p>about</p>
+            <div class="about">
+                    <div class="about-text">
+                        <h1>About</h1>
+
+                        <div>
+                            <h2>為什麼會弄這個網站</h2>
+                            <p style="color: #bcb9b9;">
+                                也沒為什麼，單純無聊的時候慢慢寫出來的
+                                Blog，或許之後自我介紹只需要給這個網站就好了 :>
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2>關於我</h2>
+                            <p style="color: #bcb9b9;">
+                                嗨嗨嗨嗨嗨，我是 kapiso ，一個就讀於彰化高中的
+                                高三牲，對於資訊領域有很大的興趣。
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2>活動參與</h2>
+                            <li>SecurityFocus Online 2023</li>
+                            <li>TAIWAN HolyYoung Training</li>
+                            <li>Happy Hacking Day</li>
+                            <li></li>
+                        </div>
+
+                        <div>
+                            <h2>競賽</h2>
+                            <li>第四屆中學生黑克松海選入圍</li>
+                            <li>Still efforting...</li>
+                        </div>
+
+                        <div>
+                            <h2>證照</h2>
+                            <li>APCS 4/3</li>
+                            <li>Still efforting...</li>
+                        </div>
+
+                        <div>
+                            <h2>其他</h2>
+                            <li>112學年度彰化高中始業輔導蚯蚓</li>
+                            <li>CHSH TKD-3rd 教學</li>
+                            <li></li>
+                        </div>
+
+                    </div>
+                </div>
         `;
         history.pushState({ page: 1 }, "New Page", "/about");
     } else if (url === '/archive') {
@@ -44,7 +92,7 @@ window.onpopstate = function () {
 
 window.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const redirectedPath = urlParams.get('redirect'); 
+    const redirectedPath = urlParams.get('redirect');
     console.log(redirectedPath);
     navigateTo(redirectedPath);
 });
