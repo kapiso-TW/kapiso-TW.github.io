@@ -52,9 +52,8 @@ function navigateTo(url) {
                             <h2>其他</h2>
                             <li>112學年度彰化高中始業輔導蚯蚓</li>
                             <li>CHSH TKD-3rd 教學</li>
-                            <li></li>
                         </div>
-
+                        <br>
                     </div>
                 </div>
         `;
