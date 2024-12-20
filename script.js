@@ -95,11 +95,6 @@ function navigateTo(url) {
     document.getElementById("hamburger-toggle").checked = false;
 }
 
-function closeMenu() {
-    
-  }
-  
-
 window.onpopstate = function () {
     navigateTo(window.location.pathname);
 };
