@@ -1,8 +1,4 @@
-/*div {
-    
-}
-
-p {
+/*p {
     outline: 2px solid red;
 }
 
@@ -50,16 +46,6 @@ p {
 .container {
     display: flex;
     justify-content: center;
-}
-
-@media (max-width: 320px) {
-    .postdiv {
-        flex-direction: column;
-    }
-
-    .bloginfo {
-        margin: 0 auto;
-    }
 }
 
 .pp {
@@ -168,4 +154,182 @@ li {
     background-clip: text;
     animation: animate8345 9s linear infinite;
     font-weight: bold;
+}
+
+/* Hamburger menu */
+.hamburger {
+    top: 5px;
+    right: 20%;
+    height: 50px;
+    width: 50px;
+    z-index: 10;
+    display: none;
+    position: absolute;
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.line {
+    transition: 0.5s;
+    stroke-width: 6px;
+    stroke: black;
+}
+
+.lineTop {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 25;
+}
+
+.lineBottom {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 60;
+}
+
+.lineMid {
+    stroke-dasharray: 40 40;
+}
+
+.checkbox:checked+svg .line {
+    stroke: crimson;
+}
+
+.checkbox:checked+svg .lineTop {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotateZ(45deg) translate(-7px, -5px);
+}
+
+.checkbox:checked+svg .lineMid {
+    stroke-dashoffset: 40;
+    opacity: 0;
+}
+
+.checkbox:checked+svg .lineBottom {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotateZ(-45deg) translate(-5px, 5px);
+}
+
+/* 小小的浮動選單樣式 */
+.nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.nav-menu li {
+    margin: 0;
+    padding: 10px 20px;
+    list-style: none;
+    text-align: left;
+}
+
+.nav-menu li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: crimson;
+}
+
+/* 點擊顯示選單 */
+.checkbox:checked~.nav-menu {
+    display: flex;
+    width: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .postdiv {
+        flex-direction: column;
+    }
+
+    .bloginfo {
+        margin: 0 auto;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* From Uiverse.io by vinodjangid07 */
+.backtop {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(#44ea7680, #39fad780);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.5s ease,
+        transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+        opacity 0.5s ease-in-out,
+        box-shadow 0.3s ease-out;
+    z-index: 1000;
+    display: none;
+}
+
+.arrow path {
+    fill: white;
+}
+
+.backtop:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.3s;
+
+}
+
+.backtop:hover .arrow {
+    animation: slide-in-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

@@ -67,7 +67,9 @@ function navigateTo(url) {
     } else if (url === '/') {
         content.innerHTML = `
             <div class="pp">
-                    <p>Devloping...</p>
+                    <a >
+
+                    </a>
                 </div>
 
                 <div class="pp">
@@ -90,7 +92,13 @@ function navigateTo(url) {
     } else{
         location.href = 'https://kapiso-tw.github.io/';
     }
+    document.getElementById("hamburger-toggle").checked = false;
 }
+
+function closeMenu() {
+    
+  }
+  
 
 window.onpopstate = function () {
     navigateTo(window.location.pathname);

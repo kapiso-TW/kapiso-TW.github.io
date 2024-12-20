@@ -15,7 +15,27 @@
             <button class="btn" onclick="navigateTo('/')">Home</button>
             <button class="btn" onclick="navigateTo('/about')">About</button>
             <button class="btn" onclick="navigateTo('/archive')">Archive</button>
+            <div>
+                <div class="hamburger">
+                    <input class="checkbox" type="checkbox" id="hamburger-toggle" />
+                    <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                        <path class="lineTop line" stroke-linecap="round" stroke-width="4" stroke="black"
+                            d="M6 11L44 11"></path>
+                        <path class="lineMid line" stroke-linecap="round" stroke-width="4" stroke="black" d="M6 24H43">
+                        </path>
+                        <path class="lineBottom line" stroke-linecap="round" stroke-width="4" stroke="black"
+                            d="M6 37H43"></path>
+                    </svg>
+                    <!-- 小小的浮動選單 -->
+                    <ul class="nav-menu" id="menu">
+                        <li><a onclick="navigateTo('/')">Home</a></li>
+                        <li><a onclick="navigateTo('/about')">About</a></li>
+                        <li><a onclick="navigateTo('/archive')">Archive</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+
 
         <br>
 
@@ -70,7 +90,41 @@
             </div>
         </div>
     </div>
+
+    <button class="backtop" id="backtop">
+        <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+            <path
+                d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
+            </path>
+        </svg>
+    </button>
+
+
+
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const backToTopButton = document.getElementById("backtop");
+        
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 120) {
+                    backToTopButton.style.opacity = "1"; // 滾動超過200px顯示
+                    backToTopButton.style.display = 'flex';
+                } else {
+                    backToTopButton.style.opacity = "0"; // 否則隱藏
+                    backToTopButton.style.display = 'onne';
+                }
+            });
+        
+            backToTopButton.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth", // 平滑滾動到頂部
+                });
+            });
+        });
+        
+    </script>
 </body>
 
 </html>
