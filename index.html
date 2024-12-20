@@ -105,17 +105,20 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const backToTopButton = document.getElementById("backtop");
-        
+
             window.addEventListener("scroll", () => {
-                if (window.scrollY > 120) {
-                    backToTopButton.style.opacity = "1"; // 滾動超過200px顯示
-                    backToTopButton.style.display = 'flex';
-                } else {
-                    backToTopButton.style.opacity = "0"; // 否則隱藏
-                    backToTopButton.style.display = 'onne';
+                if (window.innerWidth > 500) {
+                    if (window.scrollY > 120) {
+                        backToTopButton.style.opacity = "1"; // 滾動超過200px顯示
+                        backToTopButton.style.display = 'flex';
+                    } else {
+                        backToTopButton.style.opacity = "0"; // 否則隱藏
+                        backToTopButton.style.display = 'onne';
+                    }
                 }
+
             });
-        
+
             backToTopButton.addEventListener("click", () => {
                 window.scrollTo({
                     top: 0,
@@ -123,7 +126,7 @@
                 });
             });
         });
-        
+
     </script>
 </body>
 
