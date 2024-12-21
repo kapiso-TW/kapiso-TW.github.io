@@ -16,7 +16,9 @@
             <button class="btn" onclick="navigateTo('/')">Home</button>
             <button class="btn" onclick="navigateTo('/about')">About</button>
             <button class="btn" onclick="navigateTo('/archive')">Archive</button>
+
             <div>
+                <button class="btn widthhidden" onclick="navigateTo('/')">Kapiso's Blog</button>
                 <div class="hamburger">
                     <input class="checkbox" type="checkbox" id="hamburger-toggle" />
                     <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
@@ -108,16 +110,13 @@
             const backToTopButton = document.getElementById("backtop");
 
             window.addEventListener("scroll", () => {
-                if (window.innerWidth > 500) {
-                    if (window.scrollY > 120) {
-                        backToTopButton.style.opacity = "1"; // 滾動超過200px顯示
-                        backToTopButton.style.display = 'flex';
-                    } else {
-                        backToTopButton.style.opacity = "0"; // 否則隱藏
-                        backToTopButton.style.display = 'onne';
-                    }
+                if (window.scrollY > 120) {
+                    backToTopButton.style.opacity = "1"; // 滾動超過200px顯示
+                    backToTopButton.style.display = 'flex';
+                } else {
+                    backToTopButton.style.opacity = "0"; // 否則隱藏
+                    backToTopButton.style.display = 'onne';
                 }
-
             });
 
             backToTopButton.addEventListener("click", () => {

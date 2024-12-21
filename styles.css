@@ -49,7 +49,7 @@ p {
 }
 
 .pp {
-    width: auto;
+    width: 80%;
     background-color: #3b5b7e;
     padding: 10px;
     margin-bottom: 15px;
@@ -216,6 +216,16 @@ li {
     transform: rotateZ(-45deg) translate(-5px, 5px);
 }
 
+.widthhidden {
+    display: none;
+    position: absolute;
+    left: 10%;
+    height: 50px;
+    width: 150px;
+    z-index: 10;
+    top: 0;
+}
+
 /* 小小的浮動選單樣式 */
 .nav-menu {
     position: absolute;
@@ -281,6 +291,18 @@ li {
     .hamburger {
         display: block;
     }
+
+    .homeicon {
+        display: block;
+    }
+
+    .bloginfo {
+        width: 90%;
+    }
+
+    .widthhidden {
+        display: block;
+    }
 }
 
 /* From Uiverse.io by vinodjangid07 */
@@ -332,4 +354,24 @@ li {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+/* From Uiverse.io by vinodjangid07 */
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background-color: rgba(252, 252, 252, 0);
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.tab:hover {
+    background-color: rgba(223, 223, 223, 0.261);
 }
