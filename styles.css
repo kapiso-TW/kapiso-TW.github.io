@@ -219,7 +219,7 @@ li {
 .widthhidden {
     display: none;
     position: absolute;
-    left: 10%;
+    left: 12%;
     height: 50px;
     width: 150px;
     z-index: 10;
