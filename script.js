@@ -60,35 +60,21 @@ function navigateTo(url) {
         history.pushState({ page: 1 }, "New Page", "/about");
     } else if (url === '/archive') {
         content.innerHTML = `
-            <p>archive</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5wjg6GlIFDuM3pNw5dEKwN?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>聽聽音樂等我開發吧 >.< /a</p>
         `;
         history.pushState({ page: 1 }, "New Page", "/archive");
     } else if (url === '/') {
         content.innerHTML = `
-            <div class="pp">
-                    <a >
-
-                    </a>
-                </div>
-
-                <div class="pp">
-                    <p>Devloping...</p>
-                </div>
-
-                <div class="pp">
-                    <p>Devloping...</p>
-                </div class="pp">
-
-                <div class="pp">
-                    <p>Devloping...</p>
-                </div class="pp">
-
-                <div class="pp">
-                    <p>Devloping...</p>
-                </div>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5wjg6GlIFDuM3pNw5dEKwN?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>聽聽音樂等我開發吧 >.< /</p>
+        <div class="#pp">
+            <a>
+            </a>
+        </div>
         `;
         history.pushState({ page: 1 }, "New Page", "/");
-    } else{
+    } else {
         location.href = 'https://kapiso-tw.github.io/';
     }
     document.getElementById("hamburger-toggle").checked = false;
