@@ -92,13 +92,15 @@ window.onpopstate = function () {
 window.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const redirectUrl = params.get('redirect');
-    const id = redirectUrl.get('id');
-    console.log(redirectUrl + "  " + id);
-    if (redirectUrl && redirectUrl != '') {
+
+    let id = null;
+    if (redirectUrl) {
+        const match = redirectUrl.match(/id=(\d+)/); // 用正則表達式解析 `id`
+        id = match ? match[1] : null;
+        console.log(redirectUrl + "  " + id);
         navigateTo(redirectUrl);
     } else {
         console.log('No redirected path');
         navigateTo('/');
     }
 });
-
