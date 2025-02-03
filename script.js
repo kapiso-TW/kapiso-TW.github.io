@@ -57,17 +57,19 @@ function navigateTo(url) {
                 </div>
             </div>
         `;
-        history.pushState({ page: 1 }, "New Page", `/about${queryString}`);
+        history.pushState({ page: 1 }, "New Page", "/about");
     } else if (pathname === '/archive') {
         if (id && id === '1') {
             content.innerHTML = `<p>TEST</p>`;
+            history.pushState({ page: 1 }, "New Page", `/archive${queryString}`);
         } else {
             content.innerHTML = `
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5wjg6GlIFDuM3pNw5dEKwN?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <p>聽聽音樂等我開發吧 >.< </p>
-        `;
+            <p>聽聽音樂等我開發吧 >.< </p>`
+            history.pushState({ page: 1 }, "New Page", "/archive");
+        ;
         }
-        history.pushState({ page: 1 }, "New Page", "/archive");
+        
     } else if (pathname === '/') {
         content.innerHTML = `
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5wjg6GlIFDuM3pNw5dEKwN?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
