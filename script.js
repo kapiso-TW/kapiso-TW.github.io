@@ -94,6 +94,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(queryString);
     const redirectUrl = params.get("redirect");
     const id = redirectUrl.get('id');
+    console.log(redirectUrl + "  " + id);
     if (redirectUrl && redirectUrl != '') {
         navigateTo(redirectUrl);
     } else {
