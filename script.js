@@ -92,11 +92,13 @@ window.onpopstate = function () {
 window.addEventListener("DOMContentLoaded", () => {
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);
-    const id = params.get('id');
-    if (window.location.pathname && window.location.pathname != '') {
-        navigateTo(window.location.pathname + queryString);
+    const redirectUrl = params.get("redirect");
+    const id = redirectUrl.get('id');
+    if (redirectUrl && redirectUrl != '') {
+        navigateTo(redirectUrl);
     } else {
         console.log('No redirected path');
         navigateTo('/');
     }
 });
+
