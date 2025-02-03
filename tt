@@ -1,16 +1,19 @@
-背景色 (Background)：#1E2A38 (深藍灰色)
-主色 (Primary)：#4A90E2 (柔和天藍色，作為亮眼重點)
-輔助色 (Secondary)：#3B5B7E (中間調的藍灰色)
-文字色 (Text)：#E0E0E0 (淡灰白，提升文字可讀性)
-強調色 (Accent)：#FFC107 (金黃色，按鈕或重要標題點綴用)
+背景色：星夜黑
+顏色碼：#0B0C10
+用途：作為網站整體背景色，呈現深邃無垠的星空感。
 
+主色調：深宇藍
+顏色碼：#1F2833
+用途：用於主要內容區塊、標題或導航列的背景，讓整體設計層次分明。
 
-<svg class="text-[1.75rem] mb-1 mr-2" data-icon="material-symbols:home-outline-rounded" height="1em"
-                    viewBox="0 0 24 24" width="1em">
-                    <symbol id="ai:material-symbols:home-outline-rounded">
-                        <path
-                            d="M6 19h3v-5q0-.425.288-.712T10 13h4q.425 0 .713.288T15 14v5h3v-9l-6-4.5L6 10zm-2 0v-9q0-.475.213-.9t.587-.7l6-4.5q.525-.4 1.2-.4t1.2.4l6 4.5q.375.275.588.7T20 10v9q0 .825-.588 1.413T18 21h-4q-.425 0-.712-.288T13 20v-5h-2v5q0 .425-.288.713T10 21H6q-.825 0-1.412-.587T4 19m8-6.75"
-                            fill="currentColor"></path>
-                    </symbol>
-                    <use xlink:href="#ai:material-symbols:home-outline-rounded"></use>
-                </svg>
+文字色：銀河灰
+顏色碼：#C5C6C7
+用途：作為一般文字和內容的主要顏色，清晰易讀，同時與深色背景形成對比。
+
+強調色：星光青
+顏色碼：#66FCF1
+用途：用於按鈕、連結或其他強調元件，營造出未來感與科技感的亮眼效果。
+
+Hover / 高亮色：流光橙
+顏色碼：#F5A623
+用途：作為互動時（如 hover 狀態）的提示色，帶來溫暖而活力的視覺衝擊。
