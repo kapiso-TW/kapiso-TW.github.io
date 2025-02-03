@@ -90,9 +90,8 @@ window.onpopstate = function () {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-    const queryString = window.location.search;
-    const params = new URLSearchParams(queryString);
-    const redirectUrl = params.get("redirect");
+    const params = new URLSearchParams(window.location.search);
+    const redirectUrl = params.get('redirect');
     const id = redirectUrl.get('id');
     console.log(redirectUrl + "  " + id);
     if (redirectUrl && redirectUrl != '') {
