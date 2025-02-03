@@ -6,10 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
   <script>
-    // 將用戶重定向到根頁面，並保留原始路徑
-    const pathname = window.location.pathname;
-    window.location.replace('/?redirect=' + pathname);
-
+    let pathname = window.location.pathname;
+    // 移除尾部的斜線（如果有的話），但保留根目錄 "/" 不變
+    if (pathname !== '/' && pathname.endsWith('/')) {
+      pathname = pathname.slice(0, -1);
+    }
+    // 再接上 queryString
+    const fullUrl = pathname + window.location.search;
+    console.log(fullUrl); // 應該會變成 "/archive?id=1"
+    window.location.replace(fullUrl);
   </script>
 </head>
 
