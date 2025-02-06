@@ -81,18 +81,18 @@ function navigateTo(url) {
                     <div class="year">2024</div>
                     <div class="line"></div>
                     <div class="months">
-                        <div class="month" data-month="1">test1</div>
-                        <div class="month" data-month="2">test2</div>
-                        <div class="month" data-month="3">test3</div>
-                        <div class="month" data-month="4">test4</div>
-                        <div class="month" data-month="5">test5</div>
-                        <div class="month" data-month="6">test6</div>
-                        <div class="month" data-month="7">test7</div>
-                        <div class="month" data-month="8">test8</div>
-                        <div class="month" data-month="9">test9</div>
-                        <div class="month" data-month="10">test10</div>
-                        <div class="month" data-month="11">test11</div>
-                        <div class="month" data-month="12">test12</div>
+                        <div class="month" data-month="1"></div>
+                        <div class="month" data-month="2"></div>
+                        <div class="month" data-month="3"></div>
+                        <div class="month" data-month="4"></div>
+                        <div class="month" data-month="5"></div>
+                        <div class="month" data-month="6"></div>
+                        <div class="month" data-month="7"></div>
+                        <div class="month" data-month="8"></div>
+                        <div class="month" data-month="9"></div>
+                        <div class="month" data-month="10"></div>
+                        <div class="month" data-month="11"></div>
+                        <div class="month" data-month="12"></div>
                     </div>
                 </div>
             </div>
