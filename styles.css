@@ -4,6 +4,9 @@
 
 img {
     outline: 2px solid red;
+}
+a{
+    outline: 2px solid red;
 }*/
 
 
@@ -49,13 +52,29 @@ p {
 }
 
 .pp {
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
     background-color: #1F2833;
     padding: 10px;
     margin-bottom: 15px;
     width: calc(100% - 10px);
     border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
 }
+
+.pp:hover{
+    transform: scale(1.02);
+    animation: spaceOutline 2s infinite linear;
+}
+
+@keyframes spaceOutline {
+    0% { box-shadow: 0 0 8px 3px #1e3a8a; }  /* 深藍 - 星空 */
+    25% { box-shadow: 0 0 8px 3px #6d28d9; } /* 紫色 - 星雲 */
+    50% { box-shadow: 0 0 8px 3px #0ea5e9; } /* 靛青 - 銀河 */
+    75% { box-shadow: 0 0 8px 3px #ec4899; } /* 粉色 - 星際塵埃 */
+    100% { box-shadow: 0 0 8px 3px #1e3a8a; } /* 回到深藍 */
+}
+
 
 .about {
     background-color: #1F2833;
@@ -275,7 +294,7 @@ li {
     display: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 610px) {
     .postdiv {
         flex-direction: column;
     }
@@ -377,4 +396,41 @@ li {
 
 .tab:hover {
     background-color: #F5A623;
+}
+
+.logo{
+    width: 48px;
+    height: 59.4px;
+    padding: 0 10px 0 0;
+}
+
+.logo-text{
+    font-size: 21px;
+}
+
+.logo-inline{
+    font-size: 19px;
+}
+
+@media(max-width:350px){
+    .logo-text{
+        font-size: 15px;
+    }
+    .logo-inline{
+        font-size: 13px;
+    }
+}
+
+.TaiwanHolyYoung{
+    width: 100%;
+    max-width: 100%;
+    background-color: #1F2833;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: calc(100% - 10px);
+    border-radius: 20px;
+}
+
+.illustrate-text{
+    font-size: 17px;
 }
