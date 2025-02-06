@@ -1,4 +1,4 @@
-/*p {
+/**/p {
     outline: 2px solid red;
 }
 
@@ -7,7 +7,10 @@ img {
 }
 a{
     outline: 2px solid red;
-}*/
+}
+div{
+    outline: 2px solid red;
+}
 
 
 
@@ -433,4 +436,60 @@ li {
 
 .illustrate-text{
     font-size: 17px;
+}
+
+/* month */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px auto;
+    width: max-content;
+    margin-left: 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+
+.year {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3a8a;
+    min-width: 50px;
+    text-align: right;
+}
+
+.line {
+    border-left: 2px dashed gray;
+    flex-grow: 1;
+    position: relative;
+}
+
+
+.months {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.month {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-color: #6d28d9;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    left: -33px;
+}
+
+.month::after {
+    content: attr(data-month);
 }

@@ -76,8 +76,27 @@ function navigateTo(url) {
             history.pushState({ page: 1 }, "New Page", `/archive${queryString}`);
         } else {
             content.innerHTML = `
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5wjg6GlIFDuM3pNw5dEKwN?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <p>聽聽音樂等我開發吧 >.< </p>`
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="year">2024</div>
+                    <div class="line"></div>
+                    <div class="months">
+                        <div class="month" data-month="1">test1</div>
+                        <div class="month" data-month="2">test2</div>
+                        <div class="month" data-month="3">test3</div>
+                        <div class="month" data-month="4">test4</div>
+                        <div class="month" data-month="5">test5</div>
+                        <div class="month" data-month="6">test6</div>
+                        <div class="month" data-month="7">test7</div>
+                        <div class="month" data-month="8">test8</div>
+                        <div class="month" data-month="9">test9</div>
+                        <div class="month" data-month="10">test10</div>
+                        <div class="month" data-month="11">test11</div>
+                        <div class="month" data-month="12">test12</div>
+                    </div>
+                </div>
+            </div>
+            `;
             history.pushState({ page: 1 }, "New Page", "/archive");
             ;
         }
