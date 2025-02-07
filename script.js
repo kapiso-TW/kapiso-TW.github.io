@@ -21,7 +21,7 @@ function navigateTo(url) {
                     <div>
                         <h2>為什麼會弄這個網站</h2>
                         <p style="color: #bcb9b9;">
-                            也沒為什麼，單純無聊的時候慢慢寫出來的小小 Blog，或許之後自我介紹只需要給這個網站就好了 :>
+                            也沒為什麼，單純無聊的時候慢慢寫出來的小小 Blog，因為也沒有人會聽我五四三我的經歷，所以想說寫成一個網站在裡面自嗨 (?，或許之後自我介紹只需要給這個網站就好了 :>。
                         </p>
                     </div>
                     <div>
@@ -115,6 +115,23 @@ function navigateTo(url) {
                     </div>
                     <hr style="width:90%; border: 2px solid #C5C6C7; border-radius: 50%;">
                     <p class="logo-inline">看到簡章蠻有趣的就去參加的小營隊</p>
+                    <p>Data : 2024/05/18<span style="color:#1F2833">123</span></p>
+                </a>
+            </div>
+
+            <div class="pp">
+                <a onclick="navigateTo('/archive?id=2')">
+                    <div style="display: flex;">
+                    <div>
+                        <img alt="chsh logo"  src="/icon/CHSH_Logo.png" style="height:60px; width:60px; padding:0 10px 0 0;">
+                    </div>
+                    <div style="max-width:100%;">
+                        <h1 class="logo-text">新生始業輔導志工</h1>
+                    </div>
+                    </div>
+                    <hr style="width:90%; border: 2px solid #C5C6C7; border-radius: 50%;">
+                    <p class="logo-inline">彰化高中蚯蚓</p>
+                    <p>Data : 2023/08/25<span style="color:#1F2833">123</span></p>
                 </a>
             </div>
         `;
