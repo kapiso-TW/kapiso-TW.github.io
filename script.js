@@ -20,13 +20,13 @@ function navigateTo(url) {
                     <h1>About</h1>
                     <div>
                         <h2>為什麼會弄這個網站</h2>
-                        <p style="color: #bcb9b9;">
+                        <p>
                             也沒為什麼，單純無聊的時候慢慢寫出來的小小 Blog，因為也沒有人會聽我五四三我的經歷，所以想說寫成一個網站在裡面自嗨 (?，或許之後自我介紹只需要給這個網站就好了 :>。
                         </p>
                     </div>
                     <div>
                         <h2>關於我</h2>
-                        <p style="color: #bcb9b9;">
+                        <p>
                             嗨嗨嗨嗨嗨，我是 kapiso ，一個就讀於彰化高中的高三生，對於資訊領域有很大的興趣。
                         </p>
                     </div>
@@ -59,9 +59,9 @@ function navigateTo(url) {
     } else if (pathname === '/archive') {
         if (id && id === '1') {
             content.innerHTML = `
-            <div class="TaiwanHolyYoung">
+            <div class="TaiwanHolyYoung illustrate-div">
                 <h3 class="illustrate-text"><span style="color:#1F2833">123</span>
-                    你該不會期待我會說什麼有趣的心得吧，想太多了 :DD，我甚至連照片都找不到，還差一點拿不到證書。
+                    你該不會期待我會說什麼有趣的心得吧，想太多了 :DD，我甚至連照片都找不到，還差一點拿不到證書...(主辦方的疏失 = =
                 </h3>
 
                 <h3><span style="color:#1F2833">123</span>
@@ -73,7 +73,32 @@ function navigateTo(url) {
                 </h3>
             </div>
             `;
-            history.pushState({ page: 1 }, "New Page", `/archive${queryString}`);
+            history.pushState({ page: 1 }, "New Page", `/archive?id=1`);
+        } else if (id && id === '2') {
+            content.innerHTML = `
+            <div class="chsh illustrate-div">
+                <img alt="志工照片" src="/icon/cheer.JPG" style="max-width:95%; display:block; margin:auto; padding:10px 0 0 0;"></img>
+                <h3><span style="color:#1F2833">123</span>
+                    很高興能在我高二時回到學校擔任新生始業輔導志工(以下簡稱蚯蚓)，帶領學弟們融入我們，過程很有趣也有很多不為人知的辛苦前置作業。
+                </h3>
+                <h3><span style="color:#1F2833">123</span>
+                    我們新訓前一天就在學校裡面度過了一天，不只練習了今年專屬得舞步，也在學習如何更好的帶領一個團隊，同時當晚也住在學校內待命了。
+                </h3>
+                <h3><span style="color:#1F2833">123</span>
+                    我這次擔任蚯蚓不僅僅是為了帶領新生而已，更是為了彌補我自己還是新生時因為班上剛好有人確診而被迫全班回家，導致我沒有看到新生專屬的營火晚會、火鳥以及火舞表演，也是高中生活中的唯一一個機會能夠看到如此壯觀的活動在學校內舉辦。
+                </h3>
+                <img alt="營火照片" src="/icon/campfire.JPG" style="max-width:95%; display:block; margin:auto;"></img>
+                <h3><span style="color:#1F2833">123</span>
+                    很開心能夠和一群新生代們開心的過了完整的兩天，或許我們的帶領能力不是一流的，但還是很感謝你們的配合，不是你們的配合整個活動也不會如此順利。
+                </h3>
+                <img alt="噴火照片" src="/icon/fire.JPG" style="max-width:95%; display:block; margin:auto;"></img>
+                <h3><span style="color:#1F2833">123</span>
+                    在擔任蚯蚓的過程中，我不僅學到了透過簡潔明瞭的肯定句能夠更加有效的帶領一群人，避免了許多的誤解，我也讓自己在面對群眾時能夠更加自信的展現自己，畢竟每個人都會有屬於自己的第一次，不必過度緊張，適度的對自己更加自信能夠增加自己的穩定性。
+                </h3>
+                <img alt="歡慶結束照片" src="/icon/1.jpg" style="max-width:95%; display:block; margin:auto;"></img>
+            </div>
+            `;
+            history.pushState({ page: 1 }, "New Page", `/archive?id=2`);
         } else {
             content.innerHTML = `
             <div class="timeline">
@@ -118,7 +143,6 @@ function navigateTo(url) {
                     <p>Data : 2024/05/18<span style="color:#1F2833">123</span></p>
                 </a>
             </div>
-
             <div class="pp">
                 <a onclick="navigateTo('/archive?id=2')">
                     <div style="display: flex;">
