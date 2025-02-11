@@ -95,7 +95,7 @@ function navigateTo(url) {
                 <h3><span style="color:#1F2833">123</span>
                     在擔任蚯蚓的過程中，我不僅學到了透過簡潔明瞭的肯定句能夠更加有效的帶領一群人，避免了許多的誤解，我也讓自己在面對群眾時能夠更加自信的展現自己，畢竟每個人都會有屬於自己的第一次，不必過度緊張，適度的對自己更加自信能夠增加自己的穩定性。
                 </h3>
-                <img alt="歡慶結束照片" src="/icon/1.jpg" style="max-width:95%; display:block; margin:auto;"></img>
+                <img alt="歡慶結束照片" src="/icon/cheer.jpeg" style="max-width:95%; display:block; margin:auto;"></img>
             </div>
             `;
             history.pushState({ page: 1 }, "New Page", `/archive?id=2`);
