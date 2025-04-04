@@ -132,7 +132,7 @@ function navigateTo(url) {
                 <a onclick="navigateTo('/archive?id=1')">
                     <div style="display: flex;">
                     <div>
-                        <img src="https://isip.moe.edu.tw/wordpress/wp-content/uploads/2019/01/ISIP_LOGO_80-99.png" class="logo" alt="教育部資訊安全人才培育計畫 Logo" srcset="https://isip.moe.edu.tw/wordpress/wp-content/uploads/2019/01/ISIP_LOGO_160-198.png 2x">
+                        <img src="/icon/ISIP_LOGO_80-99.png" class="logo" alt="教育部資訊安全人才培育計畫 Logo" srcset="https://isip.moe.edu.tw/wordpress/wp-content/uploads/2019/01/ISIP_LOGO_160-198.png 2x">
                     </div>
                     <div style="max-width:100%;">
                         <h1 class="logo-text">TaiwanHolyYoung Training CTF</h1>
