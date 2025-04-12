@@ -379,7 +379,6 @@ li {
     }
 }
 
-/* From Uiverse.io by vinodjangid07 */
 .tab {
     display: flex;
     align-items: center;
@@ -442,7 +441,7 @@ li {
     flex-direction: column;
     align-items: flex-start;
     margin: 20px auto;
-    width: max-content;
+    width: fit-content;
     margin-left: 0;
 }
 
@@ -533,4 +532,6 @@ li {
     background-color: #1F2833;
     padding: 10px;
     border-radius: 20px;
+    width:fit-content;
+    max-width: calc(100% - 10px);
 }

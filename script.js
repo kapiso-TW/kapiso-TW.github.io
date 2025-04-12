@@ -102,25 +102,31 @@ function navigateTo(url) {
         } else {
             content.innerHTML = `
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="year">2024</div>
-                    <div class="line"></div>
-                    <div class="months">
-                        <div class="month" data-month="1"></div>
-                        <div class="month" data-month="2"></div>
-                        <div class="month" data-month="3"></div>
-                        <div class="month" data-month="4"></div>
-                        <div class="month" data-month="5"></div>
-                        <div class="month" data-month="6"></div>
-                        <div class="month" data-month="7"></div>
-                        <div class="month" data-month="8"></div>
-                        <div class="month" data-month="9"></div>
-                        <div class="month" data-month="10"></div>
-                        <div class="month" data-month="11"></div>
-                        <div class="month" data-month="12"></div>
+                    <div class="timeline-item">
+                        <div class="year">2024</div>
+                        <div class="line"></div>
+                        <div class="months">
+                            <div class="month" data-month="1"></div>
+                            <div class="month" data-month="2"></div>
+                            <div class="month" data-month="3"></div>
+                            <div class="month" data-month="4"></div>
+                            <div class="month" data-month="5"></div>
+                            <p class="event">
+                                TaiwanHolyYoung Training CTF
+                            </p>
+                            <div class="month" data-month="6"></div>
+                            <div class="month" data-month="7"></div>
+                            <div class="month" data-month="8"></div>
+                            <p class="event">
+                                新生始業輔導志工
+                            </p>
+                            <div class="month" data-month="9"></div>
+                            <div class="month" data-month="10"></div>
+                            <div class="month" data-month="11"></div>
+                            <div class="month" data-month="12"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
             `;
             history.pushState({ page: 1 }, "New Page", "/archive");
             ;
