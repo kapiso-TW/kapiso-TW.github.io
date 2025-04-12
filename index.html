@@ -8,7 +8,9 @@
     <link rel="icon" href="./icon/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalam&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Zen+Maru+Gothic&display=swap"
+        rel="stylesheet">
     <title>kapiso</title>
 </head>
 
@@ -50,10 +52,10 @@
                 <div class="bloginfo container">
 
                     <div style="text-align: center;">
-                        <img src="./icon/kapiso.jpg" class="kapiso">
-                        <p style="margin: 5px;">kapiso</p>
+                        <img src="./icon/IMG_2675.JPG" class="hong">
+                        <p style="margin: 5px;">Hong</p>
                         <hr style="width: 50%; margin: 0 auto; border: 2px solid #4A90E2; border-radius: 20%;">
-                        <p style="font-size: 15px; letter-spacing: 2px;">一隻只想好好休息的學生</p>
+                        <p style="font-size: 15px; letter-spacing: 2px;">If you can dream it you can do it</p>
                     </div>
 
                     <div style="display: flex; justify-content: center; gap: 15px">
@@ -93,46 +95,69 @@
             </div>
 
             <div id="content" style="padding: 10px; max-width: 90%; width:90%;">
-                <br><br><br>
-                <div class="loader container">loading...</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="year">2024</div>
+                        <div class="line"></div>
+                        <div class="months">
+                            <div class="month" data-month="1"></div>
+                            <div class="month" data-month="2"></div>
+                            <div class="month" data-month="3"></div>
+                            <div class="month" data-month="4"></div>
+                            <div class="month" data-month="5"></div>
+                            <p class="event">
+                                TaiwanHolyYoung Training CTF
+                            </p>
+                            <div class="month" data-month="6"></div>
+                            <div class="month" data-month="7"></div>
+                            <div class="month" data-month="8"></div>
+                            <p calss="event">
+                                新生始業輔導志工
+                            </p>
+                            <div class="month" data-month="9"></div>
+                            <div class="month" data-month="10"></div>
+                            <div class="month" data-month="11"></div>
+                            <div class="month" data-month="12"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <button class="backtop" id="backtop">
-        <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
-            <path
-                d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
-            </path>
-        </svg>
-    </button>
-
+        <button class="backtop" id="backtop">
+            <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+                <path
+                    d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
+                </path>
+            </svg>
+        </button>
 
 
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const backToTopButton = document.getElementById("backtop");
 
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 120) {
-                    backToTopButton.style.opacity = "1"; // 滾動超過200px顯示
-                    backToTopButton.style.display = 'flex';
-                } else {
-                    backToTopButton.style.opacity = "0"; // 否則隱藏
-                    backToTopButton.style.display = 'onne';
-                }
-            });
+        <script src="script.j"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const backToTopButton = document.getElementById("backtop");
 
-            backToTopButton.addEventListener("click", () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth", // 平滑滾動到頂部
+                window.addEventListener("scroll", () => {
+                    if (window.scrollY > 120) {
+                        backToTopButton.style.opacity = "1"; // 滾動超過200px顯示
+                        backToTopButton.style.display = 'flex';
+                    } else {
+                        backToTopButton.style.opacity = "0"; // 否則隱藏
+                        backToTopButton.style.display = 'onne';
+                    }
+                });
+
+                backToTopButton.addEventListener("click", () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth", // 平滑滾動到頂部
+                    });
                 });
             });
-        });
 
-    </script>
+        </script>
 </body>
 
 </html>

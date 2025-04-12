@@ -36,8 +36,8 @@ body {
     border-radius: 0 0 20px 20px;
 }
 
-.kapiso {
-    height: 160px;
+.hong {
+    max-height: 160px;
     padding: 5px 0 0 0;
     border-radius: 20px;
 }
@@ -527,4 +527,10 @@ li {
 @keyframes rainbow {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
+}
+
+.event {
+    background-color: #1F2833;
+    padding: 10px;
+    border-radius: 20px;
 }
