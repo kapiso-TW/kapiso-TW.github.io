@@ -21,7 +21,7 @@ function navigateTo(url) {
                     <div>
                         <h2>為什麼會弄這個網站</h2>
                         <p>
-                            也沒為什麼，單純無聊的時候慢慢寫出來的小小 Blog，因為也沒有人會聽我五四三我的經歷，所以想說寫成一個網站在裡面自嗨 (?，或許之後自我介紹只需要給這個網站就好了 :>。
+                            在生活中，我常常體會到許多微小但溫暖的瞬間，可惜的是，這些時刻無人可以傾訴，也容易隨時間而淡忘。同時，我經常參加營隊等活動，卻在數月後便忘記當時的趣事與感動。基於這樣的想法，我希望能打造一個屬於自己的網站，不僅能記錄生活點滴，也能成為日後回憶過往的載體。    
                         </p>
                     </div>
                     <div>
@@ -138,7 +138,7 @@ function navigateTo(url) {
                 <a onclick="navigateTo('/archive?id=1')">
                     <div style="display: flex;">
                     <div>
-                        <img src="/icon/ISIP_LOGO_80-99.png" class="logo" alt="教育部資訊安全人才培育計畫 Logo" srcset="https://isip.moe.edu.tw/wordpress/wp-content/uploads/2019/01/ISIP_LOGO_160-198.png 2x">
+                        <img src="/icon/ISIP_LOGO_80-99.png" class="logo" alt="教育部資訊安全人才培育計畫 Logo">
                     </div>
                     <div style="max-width:100%;">
                         <h1 class="logo-text">TaiwanHolyYoung Training CTF</h1>
