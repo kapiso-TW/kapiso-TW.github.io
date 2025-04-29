@@ -19,7 +19,7 @@ class Firework {
     this.y = window.innerHeight;
     this.targetY = targetY;
     this.color = color;
-    this.speedY = -15;
+    this.speedY = Math.random()*(-8)-14;
     this.exploded = false;
     this.particles = [];
     this.trail = [];
@@ -178,4 +178,14 @@ function cube() {
     ca.style.visibility = 'visible';  // 顯示卡片
     cc.style.display = 'none';
   }, 1000);
+}
+
+function reco(wh){
+  if(wh=='dc'){
+    window.location.href = 'https://discord.com/users/678225775648047114';
+  }else if(wh=='ig'){
+    window.location.href = 'https://www.instagram.com/numb_kapiso?igsh=YTQ1dW5jNWZ0bXN0&utm_source=qr';
+  }else{
+    location=location;
+  }
 }
