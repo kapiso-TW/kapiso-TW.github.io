@@ -12,9 +12,101 @@ body {
 canvas {
     display: block;
     position: fixed;
+    background-color: transparent;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    outline: 2px solid red;
+    z-index: 0;
 }
+
+/* 星空背景 */
+.stars {
+    width: 100%;
+    height: 100%;
+    background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: twinkling 1000s infinite linear;
+}
+
+@keyframes twinkling {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
+/* Rotation cube */ 
+.cube-container {
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+    margin: 50px auto;
+    transition: 0.8s ease-out;
+    scale: 0.7;
+  }
+  
+  .cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 8s infinite linear;
+  }
+
+  #cube {
+    transition: transform 2s ease-in-out, opacity 1s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 200px;
+    background: #00000045;
+    border: 2px solid;
+    border-image: var(--french);
+    box-shadow: 0 0 80px -25px rgba(219, 213, 213, 0.7)
+  }
+  
+  .front {
+    transform: translateZ(100px);
+  }
+  
+  .back {
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+  
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+  
