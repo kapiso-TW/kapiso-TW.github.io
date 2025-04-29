@@ -9,10 +9,6 @@ body {
   touch-action: none;
 }
 
-img{
-  visibility: hidden;
-}
-
 canvas {
   display: block;
   position: fixed;
