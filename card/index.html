@@ -1,32 +1,69 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="styles.css">
-  <title>Card</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <title>Card</title>
+  </head>
 
-<body>
-  <div class="stars">
-    <div style="color: white; z-index: 4; display: flex; Justify-content: center; margin-top: 10%">
-      <a href="#" onclick="cube()">
-        <div class="cube-container" id="cube">
-          <div class="cube">
-            <div class="face front">Click me</div>
-            <div class="face back">Click me</div>
-            <div class="face right">Click me</div>
-            <div class="face left">Click me</div>
-            <div class="face top">Click me</div>
-            <div class="face bottom">Click me</div>
+  <body>
+    <div class="stars">
+      <div
+        style="color: white; z-index: 4; display: flex; Justify-content: center; margin-top: 35%;">
+        <a href="#" onclick="cube()" id="cube">
+          <div class="cube-container">
+            <div class="cube">
+              <div class="face front">Click me</div>
+              <div class="face back">Click me</div>
+              <div class="face right">Click me</div>
+              <div class="face left">Click me</div>
+              <div class="face top">Click me</div>
+              <div class="face bottom">Click me</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div style="display: flex; Justify-content: center; margin-top: 0;">
+        <div class="card" id="card">
+          <div class="header">
+
+            <div class="div_image_v">
+              <div class="image">
+                <svg viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                    stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path d="M20 7L9.00004 18L3.99994 13" stroke="#000000"
+                      stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="content">
+              <span class="title">Thank you</span>
+              <p class="message">
+                <span style="color: rgb(0,0,0,0)">空格</span>
+                很高興能和你收到了我的交換禮物，這次我準備了一個網站來跟你分享我的心意。希望這個網站帶給你一點小小的驚喜和溫暖！
+              </p>
+              <p class="message">
+                <span style="color: rgb(0,0,0,0)">空格</span>同時也希望你喜歡我送的卡比獸，因為我有兩隻一模一樣的所以拿了一隻出去交換，希望你可以好好的愛護他 -_- <--這是卡比獸
+              </p>
+            </div>
+
           </div>
         </div>
-      </a>
+      </div>
+
     </div>
-  </div>
-  <canvas id="canvas"></canvas>
-  <script src="script.js"></script>
-</body>
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+  </body>
 
 </html>

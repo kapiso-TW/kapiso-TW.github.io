@@ -45,6 +45,16 @@ canvas {
     margin: 50px auto;
     transition: 0.8s ease-out;
     scale: 0.7;
+    animation: jump 2s ease-in-out infinite;
+  }
+
+  @keyframes jump {
+    0%, 100% {
+      transform: translateY(25%);
+    }
+    50% {
+      transform: translateY(-25%);
+    }
   }
   
   .cube {
@@ -59,8 +69,9 @@ canvas {
     transition: transform 2s ease-in-out, opacity 1s ease-in-out;
     transform: scale(1);
     opacity: 1;
+    user-select: none;
+
   }
-  
   
   .face {
     position: absolute;
@@ -109,4 +120,84 @@ canvas {
       transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     }
   }
-  
+
+  .card {
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    max-width: 990%;
+    background-color: #ffffff00;
+    opacity: 0; /* 初始是隱藏的 */
+    visibility: hidden; /* 初始是隱藏的 */
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* 漸顯效果 */
+  }
+
+.div_image_v {
+    background: #ffffff00;
+    border-bottom: none;
+    position: relative;
+    text-align: center;
+    margin: -20px -20px 0;
+    padding: 5px;
+}
+
+.header {
+    padding: 1.25rem 1rem 1rem 1rem;
+}
+
+.image {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e2feee;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    animation: animate .6s linear alternate-reverse infinite;
+    transition: .6s ease;
+}
+
+.image svg {
+    color: #0afa2a;
+    width: 2rem;
+    height: 2rem;
+}
+
+.content {
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+.title {
+    color: #066e29;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3rem;
+}
+
+.message {
+  margin-top: 0.5rem;
+  color: #e3e3e3;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  text-align: left;  /* 讓文字居中 */
+  justify-content: center;
+  padding: 5px;
+  max-width: 95%;
+  margin-left: auto;  /* 讓內容區塊居中 */
+  margin-right: auto;  /* 讓內容區塊居中 */
+}
+
+
+@keyframes animate {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}

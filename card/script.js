@@ -1,5 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+let stfi = 0;
 
 // 自適應螢幕大小
 function resizeCanvas() {
@@ -152,15 +153,18 @@ canvas.addEventListener('click', handleLaunch);
 canvas.addEventListener('touchstart', handleLaunch);
 
 window.addEventListener('load', () => {
-  setInterval(() => {
-    launchFirework(Math.random() * window.innerWidth);
-  }, 1500); // 每1.5秒放一個煙火
+    setInterval(() => {
+      if(stfi==1){
+        launchFirework(Math.random() * window.innerWidth);
+      }
+    }, 1500); // 每1.5秒放一個煙火
 });
 
 animate();
 
 function cube() {
   const cc = document.getElementById('cube');
+  const ca = document.getElementById('card')
   
   // 觸發動畫
   cc.style.pointerEvents = 'none';
@@ -169,6 +173,9 @@ function cube() {
 
   // 動畫完成後隱藏
   setTimeout(() => {
+    stfi = 1;
+    ca.style.opacity = '1';  // 顯示卡片，設定為可見
+    ca.style.visibility = 'visible';  // 顯示卡片
     cc.style.display = 'none';
   }, 1000);
 }

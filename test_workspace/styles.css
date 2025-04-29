@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0.6em;
+    border-radius: 10px;
+    background: linear-gradient(
+      90deg,
+      #3498db,
+      #2ecc71,
+      #e74c3c,
+      #f39c12,
+      #3498db
+    );
+    background-size: 900% 900%;
+    animation: changeGradient 10s ease infinite; /* 10s duration, ease timing function, infinite loop */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  
+  @keyframes changeGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
