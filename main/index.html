@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="./icon/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kalam&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Zen+Maru+Gothic&display=swap"
-        rel="stylesheet">
-    <title>kapiso</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./icon/favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kalam&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Zen+Maru+Gothic&display=swap"
+            rel="stylesheet">
+        <title>kapiso</title>
+    </head>
 
-<body>
-    <p style="font-size:20px">不要亂點連結 :(</p>
-    <video autoplay muted loop playsinline  style="width:99%">
-    <source src="../icon/video.mp4" type="video/mp4">
-        你的瀏覽器不支援影片播放
-    </video>
-</body>
+    <body>
+        <div style="max-width: 100vh; max-height:100vh">
+            <p style="font-size:20px">不要亂點連結 :(</p>
+            <video autoplay muted loop playsinline style="width:99%;">
+                <source src="../icon/video.mp4" type="video/mp4">
+                你的瀏覽器不支援影片播放
+            </video>
+        </div>
+    </body>
+    <style>
+    body,
+    div {
+        display: grid;
+        place-items: center;
+        background-color: rgb(211, 155, 155);
+    }
+</style>
 
 </html>
