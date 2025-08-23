@@ -7,13 +7,11 @@
   <title>Redirecting...</title>
   <script>
     let pathname = window.location.pathname;
-    // 移除尾部的斜線（如果有的話），但保留根目錄 "/" 不變
     if (pathname !== '/' && pathname.endsWith('/')) {
       pathname = pathname.slice(0, -1);
     }
-    // 再接上 queryString
     const fullUrl = pathname + window.location.search;
-    console.log(fullUrl); // 應該會變成 "/archive?id=1"
+    console.log(fullUrl);
     window.location.replace('/?redirect=' + fullUrl);
   </script>
 </head>
