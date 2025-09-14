@@ -55,7 +55,7 @@ function navigateTo(url) {
                 </div>
             </div>
         `;
-        history.pushState({ page: 1 }, "New Page", "/about");
+        history.pushState({ page: "/about" }, "New Page", "/about");
     } else if (pathname === '/archive') {
         if (id && id === '1') {
             content.innerHTML = `
@@ -73,7 +73,7 @@ function navigateTo(url) {
                 </h3>
             </div>
             `;
-            history.pushState({ page: 1 }, "New Page", `/archive?id=1`);
+            history.pushState({ page: "archive?id=1" }, "New Page", `/archive?id=1`);
         } else if (id && id === '2') {
             content.innerHTML = `
             <div class="chsh illustrate-div">
@@ -98,7 +98,7 @@ function navigateTo(url) {
                 <img alt="歡慶結束照片" src="/icon/cheer.jpeg" style="max-width:95%; display:block; margin:auto;"></img>
             </div>
             `;
-            history.pushState({ page: 1 }, "New Page", `/archive?id=2`);
+            history.pushState({ page: "archive?id=2" }, "New Page", `/archive?id=2`);
         } else {
             content.innerHTML = `
             <div class="timeline">
@@ -128,7 +128,7 @@ function navigateTo(url) {
                     </div>
                 </div>
             `;
-            history.pushState({ page: 1 }, "New Page", "/archive");
+            history.pushState({ page: "archive" }, "New Page", "/archive");
             ;
         }
 
@@ -165,7 +165,7 @@ function navigateTo(url) {
                 </a>
             </div>
         `;
-        history.pushState({ page: 1 }, "New Page", "/");
+        history.pushState({ page: "/" }, "New Page", "/");
     } else {
         location.href = 'https://kapiso-tw.github.io/';
     }
