@@ -1,0 +1,304 @@
+html,
+body {
+  font-family: "Huninn", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(16, 16, 16);
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+/* background stars */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  z-index: 1;
+  animation: twinkling 1000s infinite linear;
+  box-sizing: border-box;
+}
+
+@keyframes twinkling {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+/* info */
+.header {
+  padding: 10px 5px 10px 5px;
+  gap: 20px;
+  background-color: #000000;
+  z-index: 1;
+  align-items: center;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.centerstyle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hover-c {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 20px;
+  transition: background-color 0.5s ease;
+  /* 淡入淡出效果 */
+  transition: scale 0.5s ease;
+  cursor: pointer;
+}
+
+.hover-c:hover {
+  background-color: rgba(161, 211, 233, 0.5);
+  /* 半透明背景 */
+  scale: 1.05;
+}
+
+.headericon-container {
+  position: relative;
+  /* dropdown 相對定位 */
+  display: inline-block;
+}
+
+.headericon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.headericon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* dropdown 預設隱藏 */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  /* 正好在 icon 底下 */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  min-width: 120px;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* hover icon 時顯示 dropdown */
+.dropdown-t:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* dropdown 連結 */
+.dropdown a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  top: 10%;
+}
+
+.table {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  align-items: stretch; /* ← 讓左右自動對齊高度 */
+}
+
+/* 左側 60% */
+.left-col {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 右側 40% */
+.right-col {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 右側大 box 拉滿父容器高度 */
+.right-col .box {
+  flex: 1;
+}
+
+/* 三個小 box 排列 */
+.three-box-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex: 1;
+}
+
+.small-box {
+  flex: 1;
+  height: 100px;
+  background-color: rgba(39, 39, 39, 0.2);
+  border: 2px solid rgba(59, 59, 59, 0.6);
+  box-shadow: 3px 3px 5px 1px rgba(251, 251, 251, 0.2);
+  color: rgb(204, 204, 204);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  /* 過渡動畫 */
+  transition:
+    flex 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),  /* 彈性放大 */
+    filter 0.4s ease,                            /* 亮度變化 */
+    background 0.4s ease;
+}
+
+.small-box:hover {
+  flex: 2.5;
+  filter: brightness(1.2);
+  background: rgba(68, 68, 68, 0.2);
+}
+
+/* 原本大 box */
+.box {
+  background-color: rgba(39, 39, 39, 0.2);
+  border: 2px solid rgba(59, 59, 59, 0.6);
+  box-shadow: 3px 3px 5px 1px rgba(251, 251, 251, 0.2);
+  color: rgb(204, 204, 204);
+  border-radius: 20px;
+  width: 100%;
+}
+
+/* rolling 特效保持原樣 */
+.rolling {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: rgba(34, 34, 34, 0.3);
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rolling .text-b {
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  font-size: 20px;
+}
+.rolling:hover .text-b {
+  opacity: 0;
+}
+
+.rolling .text-a {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.rolling:hover .text-a {
+  opacity: 1;
+}
+
+/* 光暈效果 */
+.rolling::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(110, 209, 248, 0.5) 0%, rgba(255,255,255,0) 70%);
+  transform: rotate(-5deg);
+  filter: blur(20px);
+  transition: left 1s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.rolling:hover::before {
+  left: 0;
+}
+
+.pr-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 圖片 + 漸層透明效果 */
+.pr-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/20240308_075055240_iOS.jpg") center/cover no-repeat;
+  opacity: 0.55;
+
+  /* 上清晰 → 下透明 */
+  mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
+
+  z-index: 1;
+}
+
+/* 文字保持清楚，不透明 */
+.pr-photo > * {
+  position: absolute;
+  z-index: 2;        /* 比圖片高 */
+  color: white;
+  top: 75%;
+  left: 15px;
+  font-size: 20px;
+  opacity: 1;        /* 不會受遮罩影響 */
+}

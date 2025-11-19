@@ -1,0 +1,19 @@
+---
+const { posts } = Astro.props;
+---
+
+<section id="posts">
+  <h2>最新文章</h2>
+  <ul style="list-style:none; padding:0;">
+    {posts.map(post => (
+      <li style="margin:1rem 0;">
+        <a href={post.url} style="color:#a0c4ff; text-decoration:none; font-weight:bold;">
+          {post.frontmatter.title}
+        </a>
+        <span style="margin-left:0.5rem; color:#ccc;">
+          {post.frontmatter.date}
+        </span>
+      </li>
+    ))}
+  </ul>
+</section>
