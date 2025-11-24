@@ -2,14 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import PostList from "../components/PostList.astro";
 import Header from "../components/Header.astro";
-
-// 載入 Markdown 文章
-const postsImport = import.meta.glob("../posts/*.md", { eager: true });
-const posts = Object.values(postsImport).sort(
-  (a, b) =>
-    new Date(b.frontmatter.date).getTime() -
-    new Date(a.frontmatter.date).getTime(),
-);
 ---
 
 <Layout>
@@ -50,9 +42,7 @@ const posts = Object.values(postsImport).sort(
         </div>
       </div>
     </div>
-    <PostList></PostList>
   </div>
-  
 </Layout>
 
 <!--
