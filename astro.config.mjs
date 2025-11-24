@@ -1,6 +1,7 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://kapiso-tw.github.io/src/pages',
-  base: '/src/pages',
-})
+  site: 'https://kapiso-tw.github.io',
+  base: '/', // user page
+});
+ 
