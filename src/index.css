@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@300;400;700&family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+TC:wght@300;400;700;900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -6,9 +6,10 @@
   --color-story-accent: #38bdf8;
   --color-story-text: #e2e8f0;
 
-  --font-serif: Merriweather, serif;
-  --font-sans: Inter, sans-serif;
-  --font-cool: 'Zhi Mang Xing', cursive;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Serif TC', serif;
+  /* Unifying fonts for consistency */
+  --font-cool: 'Long Cang', cursive;
 }
 
 /* Custom Utilities */
@@ -20,5 +21,16 @@
 body {
   @apply bg-story-dark text-story-text font-serif antialiased;
   background-image: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  /* Prevent scrolling */
+  user-select: none;
+  /* Prevent text selection */
+}
+
+/* Prevent image dragging */
+img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
