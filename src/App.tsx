@@ -5,12 +5,15 @@ import { Flame } from 'lucide-react';
 
 // Effect Component: Floating Embers
 const Embers = () => {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const particleCount = isMobile ? 6 : 15;
+
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      {[...Array(15)].map((_, i) => (
+      {[...Array(particleCount)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute bg-orange-500/60 rounded-full blur-[1px]"
+          className="absolute bg-orange-500/60 rounded-full blur-[1px] will-change-transform"
           style={{
             width: Math.random() * 4 + 2 + "px",
             height: Math.random() * 4 + 2 + "px",
@@ -36,12 +39,15 @@ const Embers = () => {
 
 // Effect Component: Drifting Steam/Fog
 const Steam = () => {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const steamCount = isMobile ? 1 : 3;
+
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      {[...Array(3)].map((_, i) => (
+      {[...Array(steamCount)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute bottom-[-20%] left-[-20%] w-[150%] h-[60%] bg-gradient-to-t from-gray-500/10 via-gray-400/5 to-transparent blur-3xl rounded-[50%]"
+          className="absolute bottom-[-20%] left-[-20%] w-[150%] h-[60%] bg-gradient-to-t from-gray-500/10 via-gray-400/5 to-transparent blur-3xl rounded-[50%] will-change-transform"
           animate={{
             x: ["-10%", "10%", "-10%"],
             scale: [1, 1.1, 1],
