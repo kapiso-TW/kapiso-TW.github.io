@@ -6,7 +6,7 @@ import { Flame } from 'lucide-react';
 // Effect Component: Floating Embers
 const Embers = () => {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  const particleCount = isMobile ? 6 : 15;
+  const particleCount = isMobile ? 4 : 15; // Even fewer on mobile
 
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -40,11 +40,11 @@ const Embers = () => {
 // Effect Component: Drifting Steam/Fog
 const Steam = () => {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  const steamCount = isMobile ? 1 : 3;
+  if (isMobile) return null; // Completely disable on mobile
 
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      {[...Array(steamCount)].map((_, i) => (
+      {[...Array(3)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute bottom-[-20%] left-[-20%] w-[150%] h-[60%] bg-gradient-to-t from-gray-500/10 via-gray-400/5 to-transparent blur-3xl rounded-[50%] will-change-transform"
@@ -332,7 +332,7 @@ function App() {
                     animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                     exit={{ opacity: 0, y: -20, filter: 'blur(5px)' }}
                     transition={{ duration: 1.0, ease: "easeOut" }}
-                    className={`w-full max-w-lg md:max-w-2xl backdrop-blur-md bg-black/40 p-8 md:p-10 rounded-2xl border border-white/5 shadow-2xl`}
+                    className={`w-full max-w-lg md:max-w-2xl backdrop-blur-none bg-black/80 md:backdrop-blur-md md:bg-black/40 p-8 md:p-10 rounded-2xl border border-white/5 shadow-2xl`}
                   >
                     <div className="mb-6 md:mb-10 relative">
                       {/* Decorative Line (Index) - Now inside the visual container */}
