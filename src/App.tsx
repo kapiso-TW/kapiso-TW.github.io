@@ -257,7 +257,7 @@ function App() {
           <motion.div className="contents" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }}>
 
             {/* Content Container */}
-            <div className="relative z-10 w-full h-full flex flex-col items-center justify-end md:justify-center p-6 md:p-12 pb-24 md:pb-32">
+            <div className="relative z-10 w-full h-full flex flex-col items-center justify-end md:justify-center p-6 md:p-12 pb-40 md:pb-32">
 
               {/* Title (Hidden on Defeat) */}
               {!currentNode?.isDefeat && (
