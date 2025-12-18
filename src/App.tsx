@@ -156,11 +156,11 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black text-white font-sans selection:bg-none cursor-default">
+    <div className="relative w-full h-[100dvh] overflow-hidden bg-black text-white font-sans selection:bg-none cursor-default">
       {LoadingOverlay}
 
-      {/* Cinematic noise/grain overlay */}
-      <div className="absolute inset-0 opacity-[0.03] z-[5] pointer-events-none"
+      {/* Cinematic noise/grain overlay - Hidden on mobile for performance */}
+      <div className="absolute inset-0 opacity-[0.03] z-[5] pointer-events-none hidden md:block"
         style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
       </div>
 
@@ -171,7 +171,7 @@ function App() {
       <Steam />
 
       {/* Fullscreen Background Image Layer */}
-      <AnimatePresence mode="popLayout">
+      <AnimatePresence>
         <motion.div
           key={currentNodeId}
           initial={{ opacity: 0, scale: 1.15 }}
@@ -185,7 +185,7 @@ function App() {
               <img
                 src={currentNode.bgImage}
                 alt="Background"
-                className="w-full h-full object-cover opacity-60 md:opacity-50"
+                className="w-full h-full object-cover opacity-80 md:opacity-50"
                 style={currentNode.bgStyle}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
@@ -216,9 +216,10 @@ function App() {
               </motion.p>
 
               <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 1.5, ease: "linear" }}
+                className="will-change-[opacity]"
               >
                 <h1 className="text-center text-5xl md:text-7xl font-cool text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-orange-500 to-red-600 tracking-widest drop-shadow-[0_0_25px_rgba(220,38,38,0.6)] animate-pulse">
                   血肉終章
@@ -286,29 +287,39 @@ function App() {
                     className="fixed inset-0 z-[100] flex items-center justify-center"
                   >
                     <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 1.0, delay: 1.0, ease: "easeOut" }}
-                      className="relative z-10 text-center mx-4 flex flex-col items-center gap-8"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 1.5, delay: 1.0, ease: "linear" }}
+                      className="relative z-10 text-center mx-4 flex flex-col items-center gap-8 will-change-[opacity]"
                     >
-                      <h2 className="text-6xl md:text-9xl font-black text-red-600 tracking-[0.5rem] md:tracking-[1rem] uppercase font-cool drop-shadow-[0_0_50px_rgba(220,38,38,1)]"
+                      <h2 className="text-6xl md:text-9xl font-black text-red-600 tracking-[0.5rem] md:tracking-[1rem] uppercase font-defeat drop-shadow-[0_0_50px_rgba(220,38,38,1)]"
                         style={{ textShadow: "0 0 30px rgba(255,0,0,0.6)" }}>
                         DEFEAT
                       </h2>
 
-                      <p className="text-base md:text-lg text-gray-400 font-serif drop-shadow-lg max-w-lg mx-auto leading-relaxed">
+                      <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 2.2, duration: 1.5 }}
+                        className="text-base md:text-lg text-gray-400 font-serif drop-shadow-lg max-w-lg mx-auto leading-relaxed will-change-[opacity]"
+                      >
                         {currentNode.text}
-                      </p>
+                      </motion.p>
 
-                      <div className="flex flex-col items-center gap-4 w-full max-w-xs transition-opacity duration-1000 delay-1000" style={{ opacity: 1 }}>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 3.5, duration: 1.0 }}
+                        className="flex flex-col items-center gap-4 w-full max-w-xs"
+                      >
                         {currentNode.choices.map((choice, idx) => (
                           <button
                             key={idx}
                             onClick={() => handleChoice(choice.nextNodeId)}
                             className="group relative w-full overflow-hidden rounded-xl p-[2px] focus:outline-none transition-transform duration-300 active:scale-[0.95]"
                           >
-                            {/* Smoother Rotating Border: Conic Gradient + Oversized Div */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_60deg,#dc2626_120deg,transparent_180deg,transparent_240deg,#dc2626_300deg,transparent_360deg)] animate-[spin_4s_linear_infinite] opacity-80 group-hover:opacity-100"></div>
+                            {/* Smoother Rotating Border: Conic Gradient + Oversized Div - Disabled on mobile */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_60deg,#dc2626_120deg,transparent_180deg,transparent_240deg,#dc2626_300deg,transparent_360deg)] animate-[spin_4s_linear_infinite] opacity-80 group-hover:opacity-100 hidden md:block"></div>
 
                             {/* Inner Content Mask */}
                             <div className="relative bg-black h-full w-full rounded-[10px] px-10 py-6 flex items-center justify-center transition-all duration-500 group-hover:bg-red-950/20 backdrop-blur-xl">
@@ -321,18 +332,18 @@ function App() {
                             <div className="absolute inset-0 rounded-xl bg-red-600/30 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out -z-10"></div>
                           </button>
                         ))}
-                      </div>
+                      </motion.div>
                     </motion.div>
                   </motion.div>
                 ) : (
                   // --- NORMAL STORY CARD ---
                   <motion.div
                     key={currentNodeId}
-                    initial={{ opacity: 0, y: 30, filter: 'blur(5px)' }}
-                    animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                    exit={{ opacity: 0, y: -20, filter: 'blur(5px)' }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     transition={{ duration: 1.0, ease: "easeOut" }}
-                    className={`w-full max-w-lg md:max-w-2xl backdrop-blur-none bg-black/80 md:backdrop-blur-md md:bg-black/40 p-8 md:p-10 rounded-2xl border border-white/5 shadow-2xl`}
+                    className={`w-full max-w-lg md:max-w-2xl backdrop-blur-none bg-black/70 md:backdrop-blur-md md:bg-black/40 p-8 md:p-10 rounded-2xl border border-white/5 shadow-2xl will-change-[opacity]`}
                   >
                     <div className="mb-6 md:mb-10 relative">
                       {/* Decorative Line (Index) - Now inside the visual container */}

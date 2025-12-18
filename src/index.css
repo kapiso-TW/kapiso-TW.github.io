@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+TC:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Noto+Serif+TC:wght@300;400;700;900&display=swap');
 @import "tailwindcss";
+
+@font-face {
+  font-family: masafont-Regular;
+  src: url(https://cdn.jsdelivr.net/gh/max32002/masafont@2.1/webfont/MasaFont-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/masafont@2.1/webfont/MasaFont-Regular.woff) format("woff");
+}
 
 @theme {
   --color-story-dark: #0f172a;
@@ -9,7 +14,8 @@
   --font-serif: 'Noto Serif TC', serif;
   --font-sans: 'Noto Serif TC', serif;
   /* Unifying fonts for consistency */
-  --font-cool: 'Long Cang', cursive;
+  --font-cool: 'masafont-Regular', cursive;
+  --font-defeat: 'Cinzel Decorative', serif;
 }
 
 /* Custom Utilities */
