@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuDarkmodeText = $rightMenu.querySelector(".menu-darkmode-text");
     menuDarkmodeText.textContent = mode === "light" ? "深色模式" : "浅色模式";
   }
-  
+
   // 初始化header
   const initAdjust = () => {
     adjustMenu(true);
@@ -478,8 +478,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ele.forEach(item => {
         item.classList.contains("url")
           ? fetchUrl(item.textContent).then(res => {
-              runJustifiedGallery(item, res);
-            })
+            runJustifiedGallery(item, res);
+          })
           : runJustifiedGallery(item, JSON.parse(item.textContent));
       });
     };
