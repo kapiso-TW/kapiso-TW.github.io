@@ -2949,7 +2949,7 @@ button {
   touch-action: manipulation;
 }
 a {
-  color: #729bbf;
+  color: var(--anzhiyu-fontcolor);
   text-decoration: none;
   word-wrap: break-word;
   -webkit-transition: all 0.2s ease 0s;
@@ -13982,7 +13982,7 @@ blockquote {
   padding-left: 0;
 }
 #article-container a {
-  color: #729bbf;
+  color: var(--anzhiyu-fontcolor);
 }
 #article-container a:hover {
   text-decoration: underline;
