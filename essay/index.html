@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="uni
 
   const getComment = async () => {
     try {
-      const res = await fetch('https://waline-1g58i93h2-kapiso-tws-projects.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
+      const res = await fetch('https://waline-beige-nine.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
       const result = await res.json()
       const walineArray = result.data.map(e => {
         return {
