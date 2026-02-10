@@ -64,7 +64,7 @@ gtag('config', 'G-VWKEWHJX6L');
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2026-02-10 16:37:13',
+  postUpdate: '2026-02-10 16:44:29',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -343,10 +343,10 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="uni
     const waline = Fn(Object.assign({
       el: '#waline-wrap',
       serverURL: 'https://waline-beige-nine.vercel.app/',
-      pageview: true,
+      pageview: false,
       dark: 'html[data-theme="dark"]',
       path: window.location.pathname,
-      comment: true,
+      comment: false,
       imageUploader: true,
     }, {"lang":"zh-TW","meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"avatar":"mp","avatarCDN":"https://sdn.geekzu.org/avatar/","login":"enable","wordLimit":1000,"pageSize":10,"locale":{"placeholder":"💭 歡迎留言討論！請遵守網路禮儀～","sofa":"來當第一個評論的人吧～","submit":"提交","reply":"回覆","cancelReply":"取消回覆","comment":"留言","refresh":"重新整理","more":"載入更多...","preview":"預覽","emoji":"表情","uploadImage":"上傳圖片","nick":"暱稱","nickError":"暱稱不能少於3個字符","mail":"郵箱","mailError":"請填寫正確的郵件地址","link":"網站","optional":"可選","gifSearchPlaceholder":"搜尋 GIF","profile":"個人資料","admin":"管理員","sticky":"置頂","word":"字","wordHint":"評論字數限制：$0","anonymous":"匿名","login":"登錄","logout":"登出","signed":"已登錄","approve":"通過","waiting":"待審核","spam":"垃圾","unsticky":"取消置頂","oldest":"按時間正序","latest":"按時間倒序","hottest":"按熱度排序","reactionTitle":"你認為這篇文章怎麼樣？"}}))
 
@@ -369,8 +369,8 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="uni
     }
   }
 
-  if ('Waline' === 'Waline' || !false) {
-    if (false) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  if ('Waline' === 'Waline' || !true) {
+    if (true) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
     else setTimeout(loadWaline, 0)
   } else {
     window.loadOtherComment = loadWaline
