@@ -16330,6 +16330,12 @@ li.card-category-list-item {
 #vcomment textarea:focus {
   background-image: none;
 }
+#waline-wrap textarea {
+  background: url("/img/noot.png") 100% 100% no-repeat;
+}
+#waline-wrap textarea:focus {
+  background-image: none;
+}
 .fireworks {
   position: fixed;
   top: 0;
