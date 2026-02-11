@@ -3317,8 +3317,8 @@ figure.highlight pre .javascript .function {
 }
 #article-container code {
   padding: 2px 4px;
-  background: var(--anzhiyu-code-stress);
-  color: #729bbf;
+  background: #484848;
+  color: #dde4ef;
 }
 #article-container pre {
   padding: 10px 20px;
@@ -19373,7 +19373,7 @@ p.p.gray {
   box-shadow: none;
 }
 [data-theme='dark'] #article-container .note code {
-  background: var(--anzhiyu-code-stress);
+  background: #484848;
 }
 [data-theme='dark'] #article-container .aplayer {
   filter: brightness(0.8);
