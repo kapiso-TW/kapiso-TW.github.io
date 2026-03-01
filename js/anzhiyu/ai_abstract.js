@@ -54,7 +54,7 @@
 
   async function readAloud() {
     if (!summaryID) {
-      anzhiyu.snackbarShow("摘要還沒加載完呢，請稍等。 。 。");
+      anzhiyu.snackbarShow("摘要還沒加載完呢，請稍后。。。");
       return;
     }
     aiReadAloudIcon = post_ai.querySelector(".anzhiyu-icon-circle-dot");
@@ -95,9 +95,9 @@
     try {
       const response = await fetch(`https://summary.tianli0.top/audio?${requestParams}`, requestOptions);
       if (response.status === 403) {
-        console.error("403 refer與key不匹配。");
+        console.error("403 refer与key不匹配。");
       } else if (response.status === 500) {
-        console.error("500 系統內部錯誤");
+        console.error("500 系统內部錯誤");
       } else {
         const audioBlob = await response.blob();
         const audioURL = URL.createObjectURL(audioBlob);
@@ -196,7 +196,7 @@
     animationRunning = false;
     elapsed = 0;
     observer.disconnect();
-    explanation.innerHTML = df ? "生成中. . ." : "請稍等. . .";
+    explanation.innerHTML = df ? "生成中. . ." : "請等待. . .";
     aiStr = str;
     aiStrLength = aiStr.length;
     observer.observe(post_ai);
@@ -253,11 +253,11 @@
       let result;
       if (response.status === 403) {
         result = {
-          summary: "403 refer與key不匹配。",
+          summary: "403 refer与key不匹配。",
         };
       } else if (response.status === 500) {
         result = {
-          summary: "500 系統內部錯誤",
+          summary: "500 系统內部錯誤",
         };
       } else {
         result = await response.json();
@@ -337,18 +337,18 @@
     let list = "";
     for (let i = 0; i < thumbnail.length; i++) {
       const item = thumbnail[i];
-      list += `<div class="ai-recommend-item"><span>推薦${
+      list += `<div class="ai-recommend-item"><span>推荐${
         i + 1
       }：</span><a href="javascript:;" onclick="pjax.loadUrl('${item.href}')" title="${
         item.title
       }" data-pjax-state="">${item.title}</a></div>`;
     }
 
-    return `推薦文章：<br /><div class="ai-recommend">${list}</div>`;
+    return `推荐文章：<br /><div class="ai-recommend">${list}</div>`;
   }
 
   function aiGoHome() {
-    startAI("正在前往部落格主頁...", false);
+    startAI("正在前往主页...", false);
     timeouts[2] = setTimeout(() => {
       if (window.pjax) {
         pjax.loadUrl("/");
@@ -381,7 +381,7 @@
       post_ai.querySelectorAll(".ai-btn-item").forEach(item => (item.style.display = "block"));
       document.getElementById("go-tianli-blog").style.display = "none";
       startAI(
-        `你好，我是本站摘要生成助理${gptName} GPT，是一個基於GPT-4的生成式AI。我在這裡只負責摘要的預生成和顯示，你無法與我直接溝通。`
+        `你好，我是本站摘要生成助理${gptName} GPT，是一個基於GPT-4的生成式AI。我在這裡只負責摘要的預先產生和顯示，你無法與我直接溝通。`
       );
     }
   }

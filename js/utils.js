@@ -358,7 +358,7 @@ const anzhiyu = {
     rm.hideRightMenu();
     if (rm.downloadimging == false) {
       rm.downloadimging = true;
-      anzhiyu.snackbarShow("正在下載中，請稍後", false, 10000);
+      anzhiyu.snackbarShow("正在下載中，請稍后", false, 10000);
       setTimeout(function () {
         let image = new Image();
         // 解决跨域 Canvas 污染问题
@@ -381,7 +381,7 @@ const anzhiyu = {
         rm.downloadimging = false;
       }, "10000");
     } else {
-      anzhiyu.snackbarShow("有正在進行中的下載，請稍後再試");
+      anzhiyu.snackbarShow("有正在進行中的下載，請稍后再試");
     }
   },
   //禁止图片右键单击
@@ -417,12 +417,12 @@ const anzhiyu = {
       if (window.getComputedStyle(commentBarrage).display === "flex") {
         commentBarrage.style.display = "none";
         anzhiyu.snackbarShow("✨ 已關閉評論彈幕");
-        document.querySelector(".menu-commentBarrage-text").textContent = "顯示熱評";
+        document.querySelector(".menu-commentBarrage-text").textContent = "顯示評論";
         document.querySelector("#consoleCommentBarrage").classList.remove("on");
         localStorage.setItem("commentBarrageSwitch", "false");
       } else {
         commentBarrage.style.display = "flex";
-        document.querySelector(".menu-commentBarrage-text").textContent = "關閉熱評";
+        document.querySelector(".menu-commentBarrage-text").textContent = "關閉評論";
         document.querySelector("#consoleCommentBarrage").classList.add("on");
         anzhiyu.snackbarShow("✨ 已開啟評論彈幕");
         localStorage.removeItem("commentBarrageSwitch");
@@ -605,11 +605,11 @@ const anzhiyu = {
       let message = "";
 
       if (hour >= 0 && hour <= 5) {
-        message = "睡個好覺，保證精力充沛";
+        message = "睡个好覺，保證精力充沛";
       } else if (hour > 5 && hour <= 10) {
-        message = "一日之計在於晨";
+        message = "一日之計在于晨";
       } else if (hour > 10 && hour <= 14) {
-        message = "吃飽了才有力氣幹活";
+        message = "吃飽了才有力气干活";
       } else if (hour > 14 && hour <= 18) {
         message = "集中精力，攻克難關";
       } else if (hour > 18 && hour <= 24) {
@@ -630,7 +630,7 @@ const anzhiyu = {
     if (!input) return;
     const evt = new Event("input", { cancelable: true, bubbles: true });
     const defaultPlaceholder =
-      "暱稱（請勿包含部落格等字樣）：\n網站地址（要求部落格地址，請勿提交個人主頁）：\n頭像圖片url（請提供盡可能清晰的圖片，我會上傳到我自己的圖床）：\n描述：\n網站截圖（可選）：\n";
+      "昵稱（请勿包含部落格等字样）：\n網址（要求部落格地址，請勿提交个人主頁）：\n頭像圖片url（請提供盡可能清晰的圖片，我會上傳到自己的圖床）：\n描述：\n站點截圖（可選）：\n";
     input.value = this.getConfigIfPresent(GLOBAL_CONFIG.linkPageTop, "addFriendPlaceholder", defaultPlaceholder);
     input.dispatchEvent(evt);
     input.focus();
@@ -806,7 +806,7 @@ const anzhiyu = {
       }
     }
 
-    console.info("已随機歌曲：", selectRandomSong, "本次随機歌曲：", randomSong.name);
+    console.info("已隨機歌曲：", selectRandomSong, "本次隨機歌曲：", randomSong.name);
   },
   // 音乐节目切换背景
   changeMusicBg: function (isChangeBg = true) {
@@ -915,7 +915,7 @@ const anzhiyu = {
     });
     anMusicRefreshBtn.addEventListener("click", () => {
       localStorage.removeItem("musicData");
-      anzhiyu.snackbarShow("已移除相關快取歌曲");
+      anzhiyu.snackbarShow("已移除相關緩存歌曲");
     });
     anMusicSwitchingBtn.addEventListener("click", () => {
       anzhiyu.changeMusicList();
@@ -1007,17 +1007,30 @@ const anzhiyu = {
       }
     });
   },
-  // 监听按键
+  // 监听按键 - 页码跳转
   toPage: function () {
     var toPageText = document.getElementById("toPageText"),
       toPageButton = document.getElementById("toPageButton"),
       pageNumbers = document.querySelectorAll(".page-number"),
-      lastPageNumber = Number(pageNumbers[pageNumbers.length - 1].innerHTML),
       pageNumber = Number(toPageText.value);
 
+    // 获取最大页码，确保在分页元素不存在或为空时有默认值
+    var lastPageNumber = 1;
+    if (pageNumbers && pageNumbers.length > 0) {
+      // 遍历所有分页数字，找出最大值（避免分页显示不完整导致的问题）
+      pageNumbers.forEach(function (el) {
+        var num = Number(el.textContent);
+        if (!isNaN(num) && num > lastPageNumber) {
+          lastPageNumber = num;
+        }
+      });
+    }
+
     if (!isNaN(pageNumber) && pageNumber >= 1 && Number.isInteger(pageNumber)) {
-      var url = "/page/" + (pageNumber > lastPageNumber ? lastPageNumber : pageNumber) + "/";
-      toPageButton.href = pageNumber === 1 ? "/" : url;
+      // 确保页码不超过最大页码
+      var targetPage = pageNumber > lastPageNumber ? lastPageNumber : pageNumber;
+      var url = "/page/" + targetPage + "/#content-inner";
+      toPageButton.href = targetPage === 1 ? "/" : url;
     } else {
       toPageButton.href = "javascript:void(0);";
     }
@@ -1106,7 +1119,7 @@ const anzhiyu = {
   // 跳转开往
   totraveling: function () {
     anzhiyu.snackbarShow(
-      "即將跳到「開往」專案的成員博客，不保證跳轉網站的安全性和可用性",
+      "即將跳到「開往」專案的成員部落格，不保證跳轉網站的安全性和可用性",
       element => {
         element.style.opacity = 0;
         travellingsTimer && clearTimeout(travellingsTimer);
@@ -1291,7 +1304,7 @@ const anzhiyu = {
     if (!$categoryBar) return;
 
     if (urlinfo === "/") {
-      $categoryBar.querySelector("#首頁").classList.add("select");
+      $categoryBar.querySelector("#首页").classList.add("select");
     } else {
       const pattern = /\/categories\/.*?\//;
       const patbool = pattern.test(urlinfo);
