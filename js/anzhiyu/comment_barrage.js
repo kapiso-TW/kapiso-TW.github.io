@@ -93,7 +93,7 @@ if (document.querySelector(".comment-barrage")) {
             <a class="barrageTitle ${
               data.mailMd5 === commentBarrageConfig.mailMd5 ? "barrageBloggerTitle" : ""
             }" href="javascript:anzhiyu.scrollTo('#post-comment')"">
-              ${data.mailMd5 === commentBarrageConfig.mailMd5 ? "博主" : "好評"}
+              ${data.mailMd5 === commentBarrageConfig.mailMd5 ? "部落客" : "熱評"}
             </a>
             <div class="barrageNick">${data.nick}</div>
             <img class="nolazyload barrageAvatar" src="https://cravatar.cn/avatar/${data.mailMd5}"/>
@@ -167,10 +167,10 @@ if (document.querySelector(".comment-barrage")) {
 
   if (localStorage.getItem("commentBarrageSwitch") !== "false") {
     document.querySelector(".comment-barrage").style.display = "flex";
-    document.querySelector(".menu-commentBarrage-text").textContent = "關閉評論";
+    document.querySelector(".menu-commentBarrage-text").textContent = "關閉熱評";
   } else {
     document.querySelector(".comment-barrage").style.display = "none";
-    document.querySelector(".menu-commentBarrage-text").textContent = "顯示評論";
+    document.querySelector(".menu-commentBarrage-text").textContent = "顯示熱評";
   }
 
   document.addEventListener("pjax:send", function () {

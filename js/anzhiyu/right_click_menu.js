@@ -76,18 +76,7 @@ var oncontextmenuFunction = function (event) {
     const $rightMenuMusicCopyMusicName = document.querySelector("#menu-music-copyMusicName");
 
     let href = event.target.href;
-    // 改进图片检测：检查当前元素或向上查找最近的图片元素
     let imgsrc = event.target.currentSrc;
-    if (!imgsrc) {
-      // 如果当前元素不是图片，尝试查找子元素或父元素中的图片
-      const imgElement =
-        event.target.tagName === "IMG"
-          ? event.target
-          : event.target.querySelector("img") || event.target.closest("img");
-      if (imgElement) {
-        imgsrc = imgElement.currentSrc || imgElement.src;
-      }
-    }
 
     // 判断模式 扩展模式为有事件
     let pluginMode = false;
@@ -188,71 +177,47 @@ window.oncontextmenu = oncontextmenuFunction;
 rm.downloadimging = false;
 
 // 复制图片到剪贴板
-rm.writeClipImg = async function (imgsrc) {
+rm.writeClipImg = function (imgsrc) {
   console.log("按下複製");
   rm.hideRightMenu();
-
-  if (rm.downloadimging) {
-    anzhiyu.snackbarShow("正在處理中，請稍候...");
-    return;
-  }
-
-  rm.downloadimging = true;
-  anzhiyu.snackbarShow("正在複製圖片，請稍後...", false, 5000);
-
-  try {
-    await copyImage(imgsrc);
-    anzhiyu.snackbarShow("複製成功！圖片已添加浮水印，請遵守版權協議");
-  } catch (error) {
-    console.error("複製圖片失敗:", error);
-    anzhiyu.snackbarShow("複製失敗，請嘗試右鍵另存為圖片");
-  } finally {
-    rm.downloadimging = false;
+  anzhiyu.snackbarShow("正在下載中，請稍候", false, 10000);
+  if (rm.downloadimging == false) {
+    rm.downloadimging = true;
+    setTimeout(function () {
+      copyImage(imgsrc);
+      anzhiyu.snackbarShow("複製成功！圖片已添加浮水印，請遵守版權協議");
+      rm.downloadimging = false;
+    }, "10000");
   }
 };
 
 function imageToBlob(imageURL) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    const c = document.createElement("canvas");
-    const ctx = c.getContext("2d");
-
-    // 设置跨域属性，允许从其他域加载图片
-    img.crossOrigin = "anonymous";
-
+  const img = new Image();
+  const c = document.createElement("canvas");
+  const ctx = c.getContext("2d");
+  img.crossOrigin = "";
+  img.src = imageURL;
+  return new Promise(resolve => {
     img.onload = function () {
-      try {
-        c.width = this.naturalWidth;
-        c.height = this.naturalHeight;
-        ctx.drawImage(this, 0, 0);
-        c.toBlob(
-          blob => {
-            if (blob) {
-              resolve(blob);
-            } else {
-              reject(new Error("無法建立圖片 Blob"));
-            }
-          },
-          "image/png",
-          1
-        );
-      } catch (e) {
-        reject(new Error("處理圖片時出錯: " + e.message));
-      }
+      c.width = this.naturalWidth;
+      c.height = this.naturalHeight;
+      ctx.drawImage(this, 0, 0);
+      c.toBlob(
+        blob => {
+          // here the image is a blob
+          resolve(blob);
+        },
+        "image/png",
+        0.75
+      );
     };
-
-    img.onerror = function () {
-      reject(new Error("圖片載入失敗，可能是跨網域限制"));
-    };
-
-    img.src = imageURL;
   });
 }
 
 async function copyImage(imageURL) {
   const blob = await imageToBlob(imageURL);
   const item = new ClipboardItem({ "image/png": blob });
-  await navigator.clipboard.write([item]);
+  navigator.clipboard.write([item]);
 }
 
 rm.copyUrl = function (id) {
@@ -398,7 +363,7 @@ function replaceAll(string, search, replace) {
 rm.searchBaidu = function () {
   anzhiyu.snackbarShow("即將跳到谷哥搜尋", false, 2000);
   setTimeout(function () {
-    window.open("https://www.google.com.tw/search?q=" + selectTextNow);
+    window.open("https://www.google.com/search?q=" + selectTextNow);
   }, "2000");
   rm.hideRightMenu();
 };
@@ -430,7 +395,8 @@ function addRightMenuClickEvent() {
     rm.hideRightMenu();
   });
 
-/*  document.getElementById("menu-translate").addEventListener("click", function () {
+/*
+  document.getElementById("menu-translate").addEventListener("click", function () {
     window.translateFn.translatePage();
     rm.hideRightMenu();
   });
@@ -450,7 +416,7 @@ function addRightMenuClickEvent() {
     toRandomPost();
   });
 
-  document.getElementById("menu-commentBarrage").addEventListener("click", anzhiyu.switchCommentBarrage);
+  // document.getElementById("menu-commentBarrage").addEventListener("click", anzhiyu.switchCommentBarrage);
 
   document.getElementById("rightmenu-mask").addEventListener("click", rm.hideRightMenu);
 
