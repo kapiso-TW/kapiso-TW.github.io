@@ -54,7 +54,7 @@
 
   async function readAloud() {
     if (!summaryID) {
-      anzhiyu.snackbarShow("摘要還沒加載完呢，請稍后。。。");
+      anzhiyu.snackbarShow("摘要还没加载完呢，请稍后。。。");
       return;
     }
     aiReadAloudIcon = post_ai.querySelector(".anzhiyu-icon-circle-dot");
@@ -97,7 +97,7 @@
       if (response.status === 403) {
         console.error("403 refer与key不匹配。");
       } else if (response.status === 500) {
-        console.error("500 系统內部錯誤");
+        console.error("500 系统内部错误");
       } else {
         const audioBlob = await response.blob();
         const audioURL = URL.createObjectURL(audioBlob);
@@ -111,7 +111,7 @@
         });
       }
     } catch (error) {
-      console.error("請求發生錯誤❎");
+      console.error("请求发生错误❎");
     }
   }
   if (switchBtn) {
@@ -196,7 +196,7 @@
     animationRunning = false;
     elapsed = 0;
     observer.disconnect();
-    explanation.innerHTML = df ? "生成中. . ." : "請等待. . .";
+    explanation.innerHTML = df ? "生成中. . ." : "请等待. . .";
     aiStr = str;
     aiStrLength = aiStr.length;
     observer.observe(post_ai);
@@ -257,7 +257,7 @@
         };
       } else if (response.status === 500) {
         result = {
-          summary: "500 系统內部錯誤",
+          summary: "500 系统内部错误",
         };
       } else {
         result = await response.json();
@@ -272,12 +272,12 @@
       if (summary) {
         startAI(summary);
       } else {
-        startAI("摘要取得失敗!!!請檢查Tianli服務是否正常!!!");
+        startAI("摘要获取失败!!!请检查Tianli服务是否正常!!!");
       }
       clearInterval(animationInterval);
     } catch (error) {
       console.error(error);
-      explanation.innerHTML = "發生異常" + error;
+      explanation.innerHTML = "发生异常" + error;
     }
   }
 
@@ -331,7 +331,7 @@
         }" data-pjax-state="">${item.title}</a></div>`;
       }
 
-      return `很抱歉，無法找到類似的文章，你也可以看看本站最新發布的文章：<br /><div class="ai-recommend">${list}</div>`;
+      return `很抱歉，无法找到类似的文章，你也可以看看本站最新发布的文章：<br /><div class="ai-recommend">${list}</div>`;
     }
 
     let list = "";
@@ -348,7 +348,7 @@
   }
 
   function aiGoHome() {
-    startAI("正在前往主页...", false);
+    startAI("正在前往博客主页...", false);
     timeouts[2] = setTimeout(() => {
       if (window.pjax) {
         pjax.loadUrl("/");
@@ -360,9 +360,9 @@
 
   function introduce() {
     if (mode == "tianli") {
-      startAI("我是文章輔助AI: TianliGPT，點選下方的按鈕，讓我產生本文簡介、推薦相關文章等。");
+      startAI("我是文章辅助AI: TianliGPT，点击下方的按钮，让我生成本文简介、推荐相关文章等。");
     } else {
-      startAI(`我是文章輔助AI: ${gptName} GPT，點選下方的按鈕，讓我產生本文簡介、推薦相關文章等。`);
+      startAI(`我是文章辅助AI: ${gptName} GPT，点击下方的按钮，让我生成本文简介、推荐相关文章等。`);
     }
   }
 
@@ -375,13 +375,13 @@
       post_ai.querySelectorAll(".ai-btn-item").forEach(item => (item.style.display = "none"));
       document.getElementById("go-tianli-blog").style.display = "block";
       startAI(
-        "你好，我是Tianli開發的摘要生成助理TianliGPT，是一個基於GPT-4的生成式AI。我在這裡只負責摘要的預生成和顯示，你無法與我直接溝通，如果你也需要一個這樣的AI摘要接口，可以在下方購買。"
+        "你好，我是Tianli开发的摘要生成助理TianliGPT，是一个基于GPT-4的生成式AI。我在这里只负责摘要的预生成和显示，你无法与我直接沟通，如果你也需要一个这样的AI摘要接口，可以在下方购买。"
       );
     } else {
       post_ai.querySelectorAll(".ai-btn-item").forEach(item => (item.style.display = "block"));
       document.getElementById("go-tianli-blog").style.display = "none";
       startAI(
-        `你好，我是本站摘要生成助理${gptName} GPT，是一個基於GPT-4的生成式AI。我在這裡只負責摘要的預先產生和顯示，你無法與我直接溝通。`
+        `你好，我是本站摘要生成助理${gptName} GPT，是一个基于GPT-4的生成式AI。我在这里只负责摘要的预生成和显示，你无法与我直接沟通。`
       );
     }
   }

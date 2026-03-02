@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuDarkmodeText = $rightMenu.querySelector(".menu-darkmode-text");
     menuDarkmodeText.textContent = mode === "light" ? "深色模式" : "浅色模式";
   }
-
+  
   // 初始化header
   const initAdjust = () => {
     adjustMenu(true);
@@ -478,8 +478,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ele.forEach(item => {
         item.classList.contains("url")
           ? fetchUrl(item.textContent).then(res => {
-            runJustifiedGallery(item, res);
-          })
+              runJustifiedGallery(item, res);
+            })
           : runJustifiedGallery(item, JSON.parse(item.textContent));
       });
     };
@@ -1517,7 +1517,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 开发者工具键盘监听
   window.onkeydown = function (e) {
-    123 === e.keyCode && anzhiyu.snackbarShow("開發者模式已打開，請遵循GPL協議", !1);
+    123 === e.keyCode && anzhiyu.snackbarShow("开发者模式已打开，请遵循GPL协议", !1);
   };
 
   // 欢迎语

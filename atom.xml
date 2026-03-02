@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>kapiso</title>
+  <icon>https://kapiso-tw.github.io/img/icon.jpg</icon>
+  <subtitle>Bug master</subtitle>
+  <link href="https://kapiso-tw.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://kapiso-tw.github.io/"/>
+  <updated>2026-03-02T15:37:59.885Z</updated>
+  <id>https://kapiso-tw.github.io/</id>
+  
+  <author>
+    <name>kapiso</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>THJCC CTF 2026 沒時間玩 :(</title>
+    <link href="https://kapiso-tw.github.io/2026/02/21/THJCC_CTF_2026/"/>
+    <id>https://kapiso-tw.github.io/2026/02/21/THJCC_CTF_2026/</id>
+    <published>2026-02-21T00:00:00.000Z</published>
+    <updated>2026-03-02T15:37:59.885Z</updated>
+    
+    
+    <summary type="html">THJCC CTF 2026</summary>
+    
+    
+    
+    <category term="coding" scheme="https://kapiso-tw.github.io/categories/coding/"/>
+    
+    
+    <category term="CTF" scheme="https://kapiso-tw.github.io/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ZERO JUDGE 解題紀錄</title>
+    <link href="https://kapiso-tw.github.io/2026/02/09/zero_judge/"/>
+    <id>https://kapiso-tw.github.io/2026/02/09/zero_judge/</id>
+    <published>2026-02-09T00:00:00.000Z</published>
+    <updated>2026-03-02T15:37:59.885Z</updated>
+    
+    
+    <summary type="html">ZERO JUDGE</summary>
+    
+    
+    
+    <category term="coding" scheme="https://kapiso-tw.github.io/categories/coding/"/>
+    
+    
+    <category term="code" scheme="https://kapiso-tw.github.io/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>picoCTF writeup</title>
+    <link href="https://kapiso-tw.github.io/2026/01/11/picoCTF/"/>
+    <id>https://kapiso-tw.github.io/2026/01/11/picoCTF/</id>
+    <published>2026-01-11T00:00:00.000Z</published>
+    <updated>2026-03-02T15:37:59.885Z</updated>
+    
+    
+    <summary type="html">picoCTF write up</summary>
+    
+    
+    
+    <category term="coding" scheme="https://kapiso-tw.github.io/categories/coding/"/>
+    
+    
+    <category term="資安" scheme="https://kapiso-tw.github.io/tags/%E8%B3%87%E5%AE%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The first Traveling</title>
+    <link href="https://kapiso-tw.github.io/2024/02/24/japan/"/>
+    <id>https://kapiso-tw.github.io/2024/02/24/japan/</id>
+    <published>2024-02-24T00:00:00.000Z</published>
+    <updated>2026-03-02T15:37:59.885Z</updated>
+    
+    
+    <summary type="html">Travel to japan</summary>
+    
+    
+    
+    <category term="life" scheme="https://kapiso-tw.github.io/categories/life/"/>
+    
+    
+    <category term="japan" scheme="https://kapiso-tw.github.io/tags/japan/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新生始業輔導志工</title>
+    <link href="https://kapiso-tw.github.io/2023/10/22/snail/"/>
+    <id>https://kapiso-tw.github.io/2023/10/22/snail/</id>
+    <published>2023-10-22T00:00:00.000Z</published>
+    <updated>2026-03-02T15:37:59.885Z</updated>
+    
+    
+    <summary type="html">新生始業輔導志工</summary>
+    
+    
+    
+    <category term="life" scheme="https://kapiso-tw.github.io/categories/life/"/>
+    
+    
+    <category term="highschool" scheme="https://kapiso-tw.github.io/tags/highschool/"/>
+    
+  </entry>
+  
+</feed>
