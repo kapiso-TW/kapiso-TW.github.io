@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $rightMenu = document.getElementById("rightMenu");
     const mode = document.documentElement.getAttribute('data-theme');
     const menuDarkmodeText = $rightMenu.querySelector(".menu-darkmode-text");
-    menuDarkmodeText.textContent = mode === "light" ? "深色模式" : "浅色模式";
+    menuDarkmodeText.textContent = mode === "light" ? "深色模式" : "淺色模式";
   }
   
   // 初始化header
@@ -558,7 +558,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (isInViewPortOfOneNoDis(pageBottomDomFlag || percentage > 90) && currentTop > 20) {
         $navTotop.classList.add("long");
-        $percentBtn.textContent = "返回顶部";
+        $percentBtn.textContent = "返回頂部";
       } else {
         $navTotop.classList.remove("long");
         $percentBtn.textContent = percentage;
@@ -796,7 +796,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (mode === "light") {
       menuDarkmodeText.textContent = "深色模式";
     } else {
-      menuDarkmodeText.textContent = "浅色模式";
+      menuDarkmodeText.textContent = "淺色模式";
     }
 
     if (!GLOBAL_CONFIG_SITE.isPost) {
@@ -1494,12 +1494,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const timer = setInterval(() => {
       if (navMusicEl && navMusicEl.querySelector("#nav-music meting-js").aplayer) {
         clearInterval(timer);
-        let msgPlay = '<i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span>';
-        let msgPause = '<i class="anzhiyufont anzhiyu-icon-pause"></i><span>暂停音乐</span>';
+        let msgPlay = '<i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音樂</span>';
+        let msgPause = '<i class="anzhiyufont anzhiyu-icon-pause"></i><span>暫停音樂</span>';
         navMusicEl.querySelector("#nav-music meting-js").aplayer.on("pause", function () {
           navMusicEl.classList.remove("playing");
           document.getElementById("menu-music-toggle").innerHTML = msgPlay;
-          document.getElementById("nav-music-hoverTips").innerHTML = "音乐已暂停";
+          document.getElementById("nav-music-hoverTips").innerHTML = "音樂已暫停";
           document.querySelector("#consoleMusic").classList.remove("on");
           anzhiyu_musicPlaying = false;
           navMusicEl.classList.remove("stretch");
@@ -1517,7 +1517,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 开发者工具键盘监听
   window.onkeydown = function (e) {
-    123 === e.keyCode && anzhiyu.snackbarShow("开发者模式已打开，请遵循GPL协议", !1);
+    123 === e.keyCode && anzhiyu.snackbarShow("開發者模式已打開，請遵循GPL協議", !1);
   };
 
   // 欢迎语
@@ -1589,7 +1589,7 @@ document.addEventListener("DOMContentLoaded", function () {
         new LingQue.Monitor().init({ id: GLOBAL_CONFIG.LA51.LingQueMonitorID, sendSuspicious: true });
       })
       .catch(error => {
-        console.error("加载51a统计异常，本地加载403是正常情况:", error);
+        console.error("載入51a統計異常，本地載入403是正常情況:", error);
       });
   }
 

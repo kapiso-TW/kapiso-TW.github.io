@@ -178,14 +178,14 @@ rm.downloadimging = false;
 
 // 复制图片到剪贴板
 rm.writeClipImg = function (imgsrc) {
-  console.log("按下复制");
+  console.log("按下複製");
   rm.hideRightMenu();
-  anzhiyu.snackbarShow("正在下载中，请稍后", false, 10000);
+  anzhiyu.snackbarShow("正在下載中，請稍後", false, 10000);
   if (rm.downloadimging == false) {
     rm.downloadimging = true;
     setTimeout(function () {
       copyImage(imgsrc);
-      anzhiyu.snackbarShow("复制成功！图片已添加盲水印，请遵守版权协议");
+      anzhiyu.snackbarShow("複製成功！圖片已添加浮水印，請遵守版權協議");
       rm.downloadimging = false;
     }, "10000");
   }
@@ -273,7 +273,7 @@ rm.copyPageUrl = function (url) {
     url = window.location.href;
   }
   rm.copyUrl(url);
-  anzhiyu.snackbarShow("复制链接地址成功", false, 2000);
+  anzhiyu.snackbarShow("複製網址成功", false, 2000);
   rm.hideRightMenu();
 };
 
@@ -361,9 +361,9 @@ function replaceAll(string, search, replace) {
 
 // 百度搜索
 rm.searchBaidu = function () {
-  anzhiyu.snackbarShow("即将跳转到百度搜索", false, 2000);
+  anzhiyu.snackbarShow("即將跳到谷哥搜尋", false, 2000);
   setTimeout(function () {
-    window.open("https://www.baidu.com/s?wd=" + selectTextNow);
+    window.open("https://www.google.com/search?q=" + selectTextNow);
   }, "2000");
   rm.hideRightMenu();
 };
@@ -371,7 +371,7 @@ rm.searchBaidu = function () {
 //分享链接
 rm.copyLink = function () {
   rm.rightmenuCopyText(domhref);
-  anzhiyu.snackbarShow("已复制链接地址");
+  anzhiyu.snackbarShow("已複製網址");
 };
 
 function addRightMenuClickEvent() {
@@ -472,7 +472,7 @@ function addRightMenuClickEvent() {
 
   document.getElementById("menu-music-copyMusicName").addEventListener("click", function () {
     rm.rightmenuCopyText(anzhiyu.musicGetName());
-    anzhiyu.snackbarShow("复制歌曲名称成功", false, 3000);
+    anzhiyu.snackbarShow("複製歌曲名稱成功", false, 3000);
   });
 }
 

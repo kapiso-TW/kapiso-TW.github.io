@@ -358,7 +358,7 @@ const anzhiyu = {
     rm.hideRightMenu();
     if (rm.downloadimging == false) {
       rm.downloadimging = true;
-      anzhiyu.snackbarShow("正在下载中，请稍后", false, 10000);
+      anzhiyu.snackbarShow("正在下載中，請稍後", false, 10000);
       setTimeout(function () {
         let image = new Image();
         // 解决跨域 Canvas 污染问题
@@ -377,11 +377,11 @@ const anzhiyu = {
           a.dispatchEvent(event); // 触发a的单击事件
         };
         image.src = imgsrc;
-        anzhiyu.snackbarShow("图片已添加盲水印，请遵守版权协议");
+        anzhiyu.snackbarShow("圖片已添加浮水印，請遵守版權協議");
         rm.downloadimging = false;
       }, "10000");
     } else {
-      anzhiyu.snackbarShow("有正在进行中的下载，请稍后再试");
+      anzhiyu.snackbarShow("有正在進行中的下載，請稍後再試");
     }
   },
   //禁止图片右键单击
@@ -416,15 +416,15 @@ const anzhiyu = {
     if (commentBarrage) {
       if (window.getComputedStyle(commentBarrage).display === "flex") {
         commentBarrage.style.display = "none";
-        anzhiyu.snackbarShow("✨ 已关闭评论弹幕");
-        document.querySelector(".menu-commentBarrage-text").textContent = "显示热评";
+        anzhiyu.snackbarShow("✨ 已關閉評論彈幕");
+        document.querySelector(".menu-commentBarrage-text").textContent = "顯示熱評";
         document.querySelector("#consoleCommentBarrage").classList.remove("on");
         localStorage.setItem("commentBarrageSwitch", "false");
       } else {
         commentBarrage.style.display = "flex";
-        document.querySelector(".menu-commentBarrage-text").textContent = "关闭热评";
+        document.querySelector(".menu-commentBarrage-text").textContent = "關閉熱評";
         document.querySelector("#consoleCommentBarrage").classList.add("on");
-        anzhiyu.snackbarShow("✨ 已开启评论弹幕");
+        anzhiyu.snackbarShow("✨ 已開啟評論彈幕");
         localStorage.removeItem("commentBarrageSwitch");
       }
     }
@@ -605,15 +605,15 @@ const anzhiyu = {
       let message = "";
 
       if (hour >= 0 && hour <= 5) {
-        message = "睡个好觉，保证精力充沛";
+        message = "睡個好覺，保證精力充沛";
       } else if (hour > 5 && hour <= 10) {
-        message = "一日之计在于晨";
+        message = "一日之計在於晨";
       } else if (hour > 10 && hour <= 14) {
-        message = "吃饱了才有力气干活";
+        message = "吃飽了才有力氣幹活";
       } else if (hour > 14 && hour <= 18) {
-        message = "集中精力，攻克难关";
+        message = "集中精力，攻克難關";
       } else if (hour > 18 && hour <= 24) {
-        message = "不要太劳累了，早睡更健康";
+        message = "不要太勞累了，早睡更健康";
       }
 
       return message;
@@ -630,7 +630,7 @@ const anzhiyu = {
     if (!input) return;
     const evt = new Event("input", { cancelable: true, bubbles: true });
     const defaultPlaceholder =
-      "昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n";
+      "暱稱（請勿包含部落格等字樣）：\n網站地址（要求部落格地址，請勿提交個人主頁）：\n頭像圖片url（請提供盡可能清晰的圖片，我會上傳到我自己的圖床）：\n描述：\n網站截圖（可選）：\n";
     input.value = this.getConfigIfPresent(GLOBAL_CONFIG.linkPageTop, "addFriendPlaceholder", defaultPlaceholder);
     input.dispatchEvent(evt);
     input.focus();
@@ -649,12 +649,12 @@ const anzhiyu = {
       anzhiyu.musicBindEvent();
       anzhiyu_musicFirst = true;
     }
-    let msgPlay = '<i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span>';
-    let msgPause = '<i class="anzhiyufont anzhiyu-icon-pause"></i><span>暂停音乐</span>';
+    let msgPlay = '<i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音樂</span>';
+    let msgPause = '<i class="anzhiyufont anzhiyu-icon-pause"></i><span>暫停音樂</span>';
     if (anzhiyu_musicPlaying) {
       navMusicEl.classList.remove("playing");
       document.getElementById("menu-music-toggle").innerHTML = msgPlay;
-      document.getElementById("nav-music-hoverTips").innerHTML = "音乐已暂停";
+      document.getElementById("nav-music-hoverTips").innerHTML = "音樂已暫停";
       document.querySelector("#consoleMusic").classList.remove("on");
       anzhiyu_musicPlaying = false;
       navMusicEl.classList.remove("stretch");
@@ -806,7 +806,7 @@ const anzhiyu = {
       }
     }
 
-    console.info("已随机歌曲：", selectRandomSong, "本次随机歌曲：", randomSong.name);
+    console.info("已隨機歌曲：", selectRandomSong, "本次随機歌曲：", randomSong.name);
   },
   // 音乐节目切换背景
   changeMusicBg: function (isChangeBg = true) {
@@ -915,7 +915,7 @@ const anzhiyu = {
     });
     anMusicRefreshBtn.addEventListener("click", () => {
       localStorage.removeItem("musicData");
-      anzhiyu.snackbarShow("已移除相关缓存歌曲");
+      anzhiyu.snackbarShow("已移除相關快取歌曲");
     });
     anMusicSwitchingBtn.addEventListener("click", () => {
       anzhiyu.changeMusicList();
@@ -1106,7 +1106,7 @@ const anzhiyu = {
   // 跳转开往
   totraveling: function () {
     anzhiyu.snackbarShow(
-      "即将跳转到「开往」项目的成员博客，不保证跳转网站的安全性和可用性",
+      "即將跳到「開往」專案的成員博客，不保證跳轉網站的安全性和可用性",
       element => {
         element.style.opacity = 0;
         travellingsTimer && clearTimeout(travellingsTimer);

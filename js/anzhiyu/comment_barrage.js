@@ -93,7 +93,7 @@ if (document.querySelector(".comment-barrage")) {
             <a class="barrageTitle ${
               data.mailMd5 === commentBarrageConfig.mailMd5 ? "barrageBloggerTitle" : ""
             }" href="javascript:anzhiyu.scrollTo('#post-comment')"">
-              ${data.mailMd5 === commentBarrageConfig.mailMd5 ? "博主" : "热评"}
+              ${data.mailMd5 === commentBarrageConfig.mailMd5 ? "部落客" : "熱評"}
             </a>
             <div class="barrageNick">${data.nick}</div>
             <img class="nolazyload barrageAvatar" src="https://cravatar.cn/avatar/${data.mailMd5}"/>
@@ -110,7 +110,7 @@ if (document.querySelector(".comment-barrage")) {
     // 遍历每个pre元素，将其替换为"【代码】"
     anzhiyuPres.forEach(pre => {
       let codePlaceholder = document.createElement("span");
-      codePlaceholder.innerText = "【代码】";
+      codePlaceholder.innerText = "【代碼】";
       pre.parentNode.replaceChild(codePlaceholder, pre);
     });
 
@@ -122,7 +122,7 @@ if (document.querySelector(".comment-barrage")) {
       if (!image.classList.contains("tk-owo-emotion")) {
         image.style.display = "none"; // 隐藏图片
         let placeholder = document.createElement("span");
-        placeholder.innerText = "【图片】";
+        placeholder.innerText = "【圖片】";
         image.parentNode.replaceChild(placeholder, image);
       }
     });
@@ -167,10 +167,10 @@ if (document.querySelector(".comment-barrage")) {
 
   if (localStorage.getItem("commentBarrageSwitch") !== "false") {
     document.querySelector(".comment-barrage").style.display = "flex";
-    document.querySelector(".menu-commentBarrage-text").textContent = "关闭热评";
+    document.querySelector(".menu-commentBarrage-text").textContent = "關閉熱評";
   } else {
     document.querySelector(".comment-barrage").style.display = "none";
-    document.querySelector(".menu-commentBarrage-text").textContent = "显示热评";
+    document.querySelector(".menu-commentBarrage-text").textContent = "顯示熱評";
   }
 
   document.addEventListener("pjax:send", function () {
