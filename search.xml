@@ -29,6 +29,21 @@
       </tags>
   </entry>
   <entry>
+    <title>picoCTF writeup</title>
+    <url>/2026/01/11/picoCTF/</url>
+    <content><![CDATA[<h1 id="ℹ️總覽"><a href="#ℹ️總覽" class="headerlink" title="ℹ️總覽"></a>ℹ️總覽</h1><p>這裡用來記錄我得 picoCTF 解題紀錄，<strong>包含完整解題方法及 flag</strong>，依照題目類別分類，請<strong>點擊下方連結以閱覽更多詳細資訊</strong>。</p>
+<h1 id="Binary-Exploitation"><a href="#Binary-Exploitation" class="headerlink" title="Binary Exploitation"></a><a href="/pico-sort/Binary_Exploitation">Binary Exploitation</a></h1><h1 id="Cryptography"><a href="#Cryptography" class="headerlink" title="Cryptography"></a><a href="/pico-sort/Cryptography">Cryptography</a></h1><h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a><a href="/pico-sort/Forensics">Forensics</a></h1><h1 id="General-Skills"><a href="#General-Skills" class="headerlink" title="General Skills"></a><a href="/pico-sort/General_Skills">General Skills</a></h1><h1 id="Reverse-Engineering"><a href="#Reverse-Engineering" class="headerlink" title="Reverse Engineering"></a><a href="/pico-sort/Reverse_Engineering">Reverse Engineering</a></h1><h1 id="Web-Exploitation"><a href="#Web-Exploitation" class="headerlink" title="Web Exploitation"></a><a href="/pico-sort/Web_Exploitation">Web Exploitation</a></h1><h1 id="web"><a href="#web" class="headerlink" title="web"></a><a href="/pico-sort/web">web</a></h1><h1 id="參考資料-網站"><a href="#參考資料-網站" class="headerlink" title="參考資料(網站)"></a>參考資料(網站)</h1><blockquote>
+<p><a href="https://www.dcode.fr/en">https://www.dcode.fr/en</a><br><a href="https://www.base64decode.org/">https://www.base64decode.org/</a><br><a href="https://gemini.google.com/app">https://gemini.google.com/app</a><br><a href="https://10015.io/">https://10015.io/</a><br><a href="https://en.wikipedia.org/wiki/JPEG_File_Interchange_Format#HeroSection">https://en.wikipedia.org/wiki/JPEG_File_Interchange_Format#HeroSection</a></p>
+</blockquote>
+<h1 id="發現本網站資料有任何錯誤之處，歡迎提供您的意見"><a href="#發現本網站資料有任何錯誤之處，歡迎提供您的意見" class="headerlink" title="發現本網站資料有任何錯誤之處，歡迎提供您的意見"></a>發現本網站資料有任何錯誤之處，歡迎提供您的意見</h1>]]></content>
+      <categories>
+        <category>coding</category>
+      </categories>
+      <tags>
+        <tag>資安</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>新生始業輔導志工</title>
     <url>/2023/10/22/snail/</url>
     <content><![CDATA[<h1 id="此篇文章為志工心得"><a href="#此篇文章為志工心得" class="headerlink" title="此篇文章為志工心得"></a>此篇文章為志工心得</h1><h2 id="過程"><a href="#過程" class="headerlink" title="過程"></a>過程</h2><p><img src="/img/snail/cheer_2.JPG" alt="image"><br>很高興能在我高二時到學校擔任 <strong>新生始業輔導志工</strong> <em>(以下簡稱蚯蚓)</em>，帶領學弟們融入我們這個大家庭，過程很有趣同時也有著許多不為人知的辛苦前置作業。<br><br>我們在新訓的前一天就在學校裡面度過了一天，不只練習了今年專屬的舞步，同時也在 <strong>學習如何更好的帶領一個團隊</strong>，當晚也就住在學校的學生宿舍內待命了，準備迎接明天的新生們~~<br><br>我這次擔任蚯蚓不僅僅是為了帶領新生而已，更是為了彌補我自己還是新生時因為班上剛好有人確診而被迫全班回家，導致我沒有看到 <strong>新生專屬的營火晚會、火鳥以及火舞表演</strong>，也是高中生活中的唯一一個機會能夠看到如此壯觀的活動在學校內舉辦。<br><br><img src="/img/snail/campfire.JPG" alt="image"><br>很開心能夠和一群新生代們開心的過了完整的兩天，或許我們的帶領能力不是一流的，但還是很感謝你們的配合，不是你們的配合整個活動也不會如此順利。<br><br><img src="/img/snail/fire.JPG" alt="image"></p>
@@ -39,6 +54,20 @@
       </categories>
       <tags>
         <tag>highschool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ZERO JUDGE 解題紀錄 - main</title>
+    <url>/2026/02/09/zero_judge/</url>
+    <content><![CDATA[<h1 id="ℹ️總覽"><a href="#ℹ️總覽" class="headerlink" title="ℹ️總覽"></a>ℹ️總覽</h1><p>這裡記錄了我在ZeroJudge<strong>解題的思路及感想</strong>，且按照題目分類整理。從基礎輸入輸出至演算法，每道題目皆<strong>包含程式碼以及解題觀念</strong>，較困難題目可能含有<strong>詳細思路</strong>。<br><strong>目前包含題數</strong>：28 題<br><strong>程式語言</strong>：C &amp; C++</p>
+<p><strong>Notice</strong>: 因讀取問題，將檔案分開存放，有需要請點及下方連結以查看</p>
+<hr>
+<h1 id="基礎題庫-1-21-題"><a href="#基礎題庫-1-21-題" class="headerlink" title="基礎題庫 1-21 題"></a><a href="/zj-detail/basic-1">基礎題庫 1-21 題</a></h1><h1 id="基礎題庫-22-27-題"><a href="#基礎題庫-22-27-題" class="headerlink" title="基礎題庫 22-27 題"></a><a href="/zj-detail/basic-2">基礎題庫 22-27 題</a></h1><h1 id="UVa-題庫"><a href="#UVa-題庫" class="headerlink" title="UVa 題庫"></a><a href="/zj-detail/uva">UVa 題庫</a></h1>]]></content>
+      <categories>
+        <category>coding</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
       </tags>
   </entry>
   <entry>
@@ -58,35 +87,6 @@
       </categories>
       <tags>
         <tag>japan</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>picoCTF writeup</title>
-    <url>/2026/01/11/picoCTF/</url>
-    <content><![CDATA[<h1 id="ℹ️總覽"><a href="#ℹ️總覽" class="headerlink" title="ℹ️總覽"></a>ℹ️總覽</h1><p>這裡用來記錄我得 picoCTF 解題紀錄，<strong>包含完整解題方法及 flag</strong>，依照題目類別分類，請<strong>點擊下方連結以閱覽更多詳細資訊</strong>。</p>
-<h1 id="Binary-Exploitation"><a href="#Binary-Exploitation" class="headerlink" title="Binary Exploitation"></a><a href="/pico-sort/Binary_Exploitation">Binary Exploitation</a></h1><h1 id="Cryptography"><a href="#Cryptography" class="headerlink" title="Cryptography"></a><a href="/pico-sort/Cryptography">Cryptography</a></h1><h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a><a href="/pico-sort/Forensics">Forensics</a></h1><h1 id="General-Skills"><a href="#General-Skills" class="headerlink" title="General Skills"></a><a href="/pico-sort/General_Skills">General Skills</a></h1><h1 id="Reverse-Engineering"><a href="#Reverse-Engineering" class="headerlink" title="Reverse Engineering"></a><a href="/pico-sort/Reverse_Engineering">Reverse Engineering</a></h1><h1 id="Web-Exploitation"><a href="#Web-Exploitation" class="headerlink" title="Web Exploitation"></a><a href="/pico-sort/Web_Exploitation">Web Exploitation</a></h1><h1 id="web"><a href="#web" class="headerlink" title="web"></a><a href="/pico-sort/web">web</a></h1><h1 id="參考資料-網站"><a href="#參考資料-網站" class="headerlink" title="參考資料(網站)"></a>參考資料(網站)</h1><blockquote>
-<p><a href="https://www.dcode.fr/en">https://www.dcode.fr/en</a><br><a href="https://www.base64decode.org/">https://www.base64decode.org/</a><br><a href="https://gemini.google.com/app">https://gemini.google.com/app</a><br><a href="https://10015.io/">https://10015.io/</a><br><a href="https://en.wikipedia.org/wiki/JPEG_File_Interchange_Format#HeroSection">https://en.wikipedia.org/wiki/JPEG_File_Interchange_Format#HeroSection</a></p>
-</blockquote>
-<h1 id="發現本網站資料有任何錯誤之處，歡迎提供您的意見"><a href="#發現本網站資料有任何錯誤之處，歡迎提供您的意見" class="headerlink" title="發現本網站資料有任何錯誤之處，歡迎提供您的意見"></a>發現本網站資料有任何錯誤之處，歡迎提供您的意見</h1>]]></content>
-      <categories>
-        <category>coding</category>
-      </categories>
-      <tags>
-        <tag>資安</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ZERO JUDGE 解題紀錄 - main</title>
-    <url>/2026/02/09/zero_judge/</url>
-    <content><![CDATA[<h1 id="ℹ️總覽"><a href="#ℹ️總覽" class="headerlink" title="ℹ️總覽"></a>ℹ️總覽</h1><p>這裡記錄了我在ZeroJudge<strong>解題的思路及感想</strong>，且按照題目分類整理。從基礎輸入輸出至演算法，每道題目皆<strong>包含程式碼以及解題觀念</strong>，較困難題目可能含有<strong>詳細思路</strong>。<br><strong>目前包含題數</strong>：28 題<br><strong>程式語言</strong>：C &amp; C++</p>
-<p><strong>Notice</strong>: 因讀取問題，將檔案分開存放，有需要請點及下方連結以查看</p>
-<hr>
-<h1 id="基礎題庫-1-21-題"><a href="#基礎題庫-1-21-題" class="headerlink" title="基礎題庫 1-21 題"></a><a href="/zj-detail/basic-1">基礎題庫 1-21 題</a></h1><h1 id="基礎題庫-22-27-題"><a href="#基礎題庫-22-27-題" class="headerlink" title="基礎題庫 22-27 題"></a><a href="/zj-detail/basic-2">基礎題庫 22-27 題</a></h1><h1 id="UVa-題庫"><a href="#UVa-題庫" class="headerlink" title="UVa 題庫"></a><a href="/zj-detail/uva">UVa 題庫</a></h1>]]></content>
-      <categories>
-        <category>coding</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
       </tags>
   </entry>
 </search>
