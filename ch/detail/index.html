@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>為牠發聲—動物保育行動日</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="theme-hub">
+    <!-- Background visual assets -->
+    <div class="ambient-overlay"></div>
+    <div class="ambient-glow orb-1"></div>
+    <div class="ambient-glow orb-2"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- 1. FULL-SCREEN THEME HUB (DASHBOARD) -->
+    <div id="theme-hub-dashboard" class="dashboard-active">
+        <div class="hub-header">
+            <span class="hub-logo-badge">
+                <i data-lucide="sprout" class="hub-logo-icon"></i>
+            </span>
+            <h2>為牠發聲—動物保育行動日</h2>
+            <p>請選擇您想探索的主題以進入閱讀</p>
+        </div>
+
+        <div class="hub-grid">
+            <!-- Card 1: Species -->
+            <div class="hub-card glass" data-target="species">
+                <div class="hub-card-bg-gradient species-grad"></div>
+                <div class="hub-card-content">
+                    <div class="hub-icon-wrapper">
+                        <i data-lucide="leaf"></i>
+                    </div>
+                    <h3>瀕危物種</h3>
+                    <p class="hub-desc">認識臺灣石虎、台灣黑熊、櫻花鉤吻鮭、歐亞水獺、黑面琵鷺及中華白海豚的生態現狀與保育概況。</p>
+                    <button class="hub-btn">
+                        <span>開啟專題</span>
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2: Threats -->
+            <div class="hub-card glass" data-target="threats">
+                <div class="hub-card-bg-gradient threats-grad"></div>
+                <div class="hub-card-content">
+                    <div class="hub-icon-wrapper">
+                        <i data-lucide="skull"></i>
+                    </div>
+                    <h3>生存威脅</h3>
+                    <p class="hub-desc">深度解析野生動物面臨的雙重致命索套：棲地破壞與破碎化，以及無差別的非法獵捕與套索誤捕。</p>
+                    <button class="hub-btn">
+                        <span>開啟專題</span>
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3: Regulations -->
+            <div class="hub-card glass" data-target="regulations">
+                <div class="hub-card-bg-gradient regulations-grad"></div>
+                <div class="hub-card-content">
+                    <div class="hub-icon-wrapper">
+                        <i data-lucide="scale"></i>
+                    </div>
+                    <h3>法規規範</h3>
+                    <p class="hub-desc">解讀政府法治層面的關鍵防護鎖：飼主法規責任、嚴懲虐待動物刑事責任、以及寵物商業產業嚴格管理。</p>
+                    <button class="hub-btn">
+                        <span>開啟專題</span>
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 4: Actions -->
+            <div class="hub-card glass" data-target="actions">
+                <div class="hub-card-bg-gradient actions-grad"></div>
+                <div class="hub-card-content">
+                    <div class="hub-icon-wrapper">
+                        <i data-lucide="heart-handshake"></i>
+                    </div>
+                    <h3>實踐行動</h3>
+                    <p class="hub-desc">從日常生活出發落實綠色實踐：領養代替購買、舉報不法獸夾、採購無動物實驗產品與投入志工。</p>
+                    <button class="hub-btn">
+                        <span>開啟專題</span>
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. CONTENT WRAPPER -->
+    <div class="app-container" id="content-container">
+        <!-- HEADER -->
+        <header class="app-header glass">
+            <div class="header-logo" id="app-header-logo">
+                <span class="logo-badge leaf-radius-1">
+                    <i data-lucide="sprout" class="logo-icon"></i>
+                </span>
+                <div class="logo-text">
+                    <h1>為牠發聲—動物保育行動日</h1>
+                    <p>TAIWAN WILDLIFE CONSERVATION</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN WRAPPER -->
+        <main class="main-content">
+            <!-- SECTION 1: ENDANGERED SPECIES -->
+            <section id="section-species" class="content-section">
+                <div class="section-hero">
+                    <span class="badge leaf-radius-1">Biodiversity</span>
+                    <h2>臺灣六大瀕危野生動物</h2>
+                    <p class="hero-desc">臺灣特殊的地貌滋養了豐富的生物多樣性。然而，人為活動的擴張使許多特有及珍貴物種面臨絕滅懸崖。以下為受法律保護且極需社會關注的六大瀕危動物：</p>
+                </div>
+
+                <!-- Direct Species Listing (No modals, listed directly) -->
+                <div class="species-list-container">
+                    
+                    <!-- 1. 台灣石虎 -->
+                    <div class="species-detail-card glass leaf-radius-1 reveal-on-scroll" id="idx-species-cat">
+                        <div class="species-img-container leaf-radius-1">
+                            <img src="image/台灣石虎.webp" alt="台灣石虎" class="species-img">
+                        </div>
+                        <div class="species-text-content">
+                            <div class="card-header-bar">
+                                <h3>台灣石虎</h3>
+                                <span class="status-tag">瀕臨絕滅</span>
+                            </div>
+                            <p class="scientific-name">Prionailurus bengalensis chinensis</p>
+                            
+                            <div class="species-info-row">
+                                <strong><i data-lucide="map-pin"></i> 棲地分布：</strong>
+                                <span>主要生活於臺灣中部淺山丘陵、農地、草生地與林緣地區（苗栗、台中、南投等地），與人類農業活動區域高度重疊。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="info"></i> 特徵習性：</strong>
+                                <span>體型如貓，身上有豹狀黑色斑點，兩眼間有兩條白色縱帶，耳後有明顯的圓白斑。夜行性，以鼠類、鳥類及昆蟲為主食。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="alert-triangle"></i> 生存主要威脅：</strong>
+                                <span>林地被道路切割導致棲地破碎、路殺車禍、遊蕩犬隻攻擊與傳染病、入侵雞舍導致農民報復性毒殺。<strong>非法捕獵（捕獸夾與俗稱「山豬吊」的套索鋼絲）是其面臨的致命共同威脅。</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. 台灣黑熊 -->
+                    <div class="species-detail-card glass leaf-radius-2 reveal-on-scroll" id="idx-species-bear">
+                        <div class="species-text-content">
+                            <div class="card-header-bar">
+                                <h3>台灣黑熊</h3>
+                                <span class="status-tag">瀕臨絕滅</span>
+                            </div>
+                            <p class="scientific-name">Ursus thibetanus formosanus</p>
+                            
+                            <div class="species-info-row">
+                                <strong><i data-lucide="map-pin"></i> 棲地分布：</strong>
+                                <span>海拔 1,000 至 3,000 公尺的針闊葉混交林與深山原始森林中，活動範圍廣泛。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="info"></i> 特徵習性：</strong>
+                                <span>臺灣特有亞種，為臺灣原生唯一的熊科動物。體型壯碩，毛色黑亮，胸前有標誌性的白色「V」字形斑紋。雜食性，生性羞怯。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="alert-triangle"></i> 生存主要威脅：</strong>
+                                <span>山地墾殖與產業道路開闢致使棲地破碎化，增加人為干擾。<strong>山林中非法設置捕捉野生動物的捕獸夾與山豬吊，常導致黑熊誤觸而斷肢殘疾（斷掌、斷趾），非法捕獵與誤捕是其族群最大生存危機。</strong></span>
+                            </div>
+                        </div>
+                        <div class="species-img-container leaf-radius-2">
+                            <img src="image/台灣黑熊.jpg" alt="台灣黑熊" class="species-img">
+                        </div>
+                    </div>
+
+                    <!-- 3. 櫻花鉤吻鮭 -->
+                    <div class="species-detail-card glass leaf-radius-1 reveal-on-scroll" id="idx-species-salmon">
+                        <div class="species-img-container leaf-radius-1">
+                            <img src="image/櫻花鉤吻鮭.jpg" alt="櫻花鉤吻鮭" class="species-img">
+                        </div>
+                        <div class="species-text-content">
+                            <div class="card-header-bar">
+                                <h3>櫻花鉤吻鮭</h3>
+                                <span class="status-tag">瀕臨絕滅</span>
+                            </div>
+                            <p class="scientific-name">Oncorhynchus masou formosanus</p>
+                            
+                            <div class="species-info-row">
+                                <strong><i data-lucide="map-pin"></i> 棲地分布：</strong>
+                                <span>侷限於大甲溪上游的雪霸國家公園武陵溪流中（如七家灣溪、高山溪），需要終年水溫低於 17°C 的純淨低溫水域。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="info"></i> 特徵習性：</strong>
+                                <span>冰河孑遺生物的臺灣國寶魚。屬於「陸封型鮭魚」，因氣候及地貌改變而終生不回大海，體側有明顯橢圓形雲斑。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="alert-triangle"></i> 生存主要威脅：</strong>
+                                <span>氣候變遷導致溪水水溫上升；防砂壩與攔砂壩阻隔了繁衍遷徙與基因交流；高山農耕造成的水質農藥污染與淤砂。<strong>歷史與偶發的非法捕撈和垂釣騷擾，是其不可忽視的生存危害。</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. 歐亞水獺 -->
+                    <div class="species-detail-card glass leaf-radius-2 reveal-on-scroll" id="idx-species-otter">
+                        <div class="species-text-content">
+                            <div class="card-header-bar">
+                                <h3>歐亞水獺</h3>
+                                <span class="status-tag">瀕臨絕滅</span>
+                            </div>
+                            <p class="scientific-name">Lutra lutra</p>
+                            
+                            <div class="species-info-row">
+                                <strong><i data-lucide="map-pin"></i> 棲地分布：</strong>
+                                <span>臺灣本島已絕跡，現今僅殘存於金門的淡水河流、池塘、灌溉埤塘及海岸區域。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="info"></i> 特徵習性：</strong>
+                                <span>趾間有蹼，身形呈流線型，聽覺與嗅覺敏銳，擅長潛水獵食魚類與蛙類。是代表淡水環境水質與多樣性極佳的最高指針。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="alert-triangle"></i> 生存主要威脅：</strong>
+                                <span>水系面臨大量防洪工程水泥化改建，失去築巢洞穴；水源過度抽取致使溪流乾枯；路殺；流浪犬攻擊。<strong>潛在的非法陷阱捕捉與獵捕是威脅其殘存极小族群（僅100多隻）的隱憂。</strong></span>
+                            </div>
+                        </div>
+                        <div class="species-img-container leaf-radius-2">
+                            <img src="image/歐亞水獺.jpg" alt="歐亞水獺" class="species-img">
+                        </div>
+                    </div>
+
+                    <!-- 5. 黑面琵鷺 -->
+                    <div class="species-detail-card glass leaf-radius-1 reveal-on-scroll" id="idx-species-spoonbill">
+                        <div class="species-img-container leaf-radius-1">
+                            <img src="image/黑面琵鷺.jpg" alt="黑面琵鷺" class="species-img">
+                        </div>
+                        <div class="species-text-content">
+                            <div class="card-header-bar">
+                                <h3>黑面琵鷺</h3>
+                                <span class="status-tag">瀕臨絕滅</span>
+                            </div>
+                            <p class="scientific-name">Platalea minor</p>
+                            
+                            <div class="species-info-row">
+                                <strong><i data-lucide="map-pin"></i> 棲地分布：</strong>
+                                <span>國際遷徙候鳥，每年秋季飛抵臺灣西南沿海（台南七股、嘉義布袋等河口溼地及淺坪魚塭）度冬。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="info"></i> 特徵習性：</strong>
+                                <span>全身雪白，面部黑色。琵琶狀長嘴在水裡左右橫掃覓食小魚蝦。被國際自然保護聯盟（IUCN）列為紅皮書瀕危物種。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="alert-triangle"></i> 生存主要威脅：</strong>
+                                <span>溼地遭受海岸光電板架設與土地重劃開發，使覓食地流失；野犬騷擾；水源爆發集體肉毒桿菌中毒。<strong>過去嚴重的非法槍擊與近年偶發的捕獸鋏夾傷等非法獵捕，也是其面臨的歷史及現實威脅。</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. 中華白海豚 -->
+                    <div class="species-detail-card glass leaf-radius-2 reveal-on-scroll" id="idx-species-dolphin">
+                        <div class="species-text-content">
+                            <div class="card-header-bar">
+                                <h3>中華白海豚</h3>
+                                <span class="status-tag">瀕臨絕滅</span>
+                            </div>
+                            <p class="scientific-name">Sousa chinensis</p>
+                            
+                            <div class="species-info-row">
+                                <strong><i data-lucide="map-pin"></i> 棲地分布：</strong>
+                                <span>分布於臺灣西部沿海（苗栗至台南），主要棲息在水深小於15公尺、距離海岸線3公里內的淺水平緩海域。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="info"></i> 特徵習性：</strong>
+                                <span>幼體呈深灰色，成年後身體逐漸變為粉紅色或純白色。背鰭基部較寬。以河口與淺海的石首魚科等底棲魚類為食。</span>
+                            </div>
+                            <div class="species-info-row">
+                                <strong><i data-lucide="alert-triangle"></i> 生存主要威脅：</strong>
+                                <span>海岸重工業開發、填海造地使棲地喪失；陸源化學廢水與水質污染；繁忙的海運與離岸風電打樁等噪音干擾；河口流量減少。<strong>最急迫的威脅是流刺網等漁網誤捕（慢速溺斃）以及海上非法獵捕捕撈活動。</strong></span>
+                            </div>
+                        </div>
+                        <div class="species-img-container leaf-radius-2">
+                            <img src="image/中華白海豚.jpg" alt="中華白海豚" class="species-img">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECTION 2: HABITAT DESTRUCTION AND ILLEGAL HUNTING -->
+            <section id="section-threats" class="content-section">
+                <div class="section-hero">
+                    <span class="badge danger-badge leaf-radius-1">Threats Analysis</span>
+                    <h2>雙重致命夾擊：棲地破壞與非法捕獵</h2>
+                    <p class="hero-desc">臺灣瀕危野生動物面臨的生存困境，主要源於人類生存邊界的擴張。棲地破壞切斷了牠們的退路，而無差別的非法捕獵更威脅著每個個體的生命安全。</p>
+                </div>
+
+                <div class="threats-layout">
+                    <!-- Column 1: Habitat Destruction -->
+                    <div class="threats-card glass leaf-radius-1 reveal-on-scroll" id="idx-threats-habitat">
+                        <div class="threat-icon-wrapper leaf-radius-1">
+                            <i data-lucide="trees" class="threat-icon"></i>
+                        </div>
+                        <h3>棲地破壞與破碎化 (Habitat Destruction)</h3>
+                        <p class="threat-summary">基礎建設擴張、海岸開發與氣候變遷正將動物的生存棲地切割、退化，使野生動物無處藏身。</p>
+                        
+                        <ul class="threat-list">
+                            <li>
+                                <strong>都市擴張與生態島嶼化：</strong>
+                                道路阻斷與山林開發把大面積棲地切成孤零零的小區塊，這逆導致路殺慘劇，更使族群基因難以交流，引發近親繁殖衰退。
+                            </li>
+                            <li>
+                                <strong>河道水泥化與陸域開發：</strong>
+                                水泥護岸消滅了河川兩側的天然洞穴（歐亞水獺的棲身所）；高山農耕造成水源污染；攔砂壩切割水道（阻礙鮭魚洄游）。
+                            </li>
+                            <li>
+                                <strong>海岸溼地變遷：</strong>
+                                西南沿海的天然泥灘地與魚塭因光電板鋪設與重工業填海而減少，極大破壞了候鳥黑面琵鷺的冬日覓食地。
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Illegal Hunting -->
+                    <div class="threats-card glass leaf-radius-2 reveal-on-scroll" id="idx-threats-hunting">
+                        <div class="threat-icon-wrapper leaf-radius-2">
+                            <i data-lucide="slash" class="threat-icon"></i>
+                        </div>
+                        <h3>非法捕獵與誤捕 (Illegal Hunting)</h3>
+                        <p class="threat-summary">儘管法規已嚴禁對保育類動物的捕殺與獵捕，但山林間暗藏的無差別陷阱與非法非法活動，仍是動物揮之不去的死亡陰影。</p>
+                        
+                        <ul class="threat-list">
+                            <li>
+                                <strong>捕獸夾與山豬吊（鋼索陷阱）：</strong>
+                                違法私設的獸鋏與鋼絲套索是山林間無差別的殺傷武器。黑熊與石虎經常誤觸，造成斷肢感染殘疾，甚至痛苦死亡。
+                            </li>
+                            <li>
+                                <strong>流刺網誤捕與非法捕撈：</strong>
+                                西南淺海的流刺網與刺網漁業，常將白海豚意外纏繞溺斃；而在高山溪流中，零星的非法垂釣與非法撈捕仍對鮭魚造成傷害。
+                            </li>
+                            <li>
+                                <strong>人獸衝突防範陷阱：</strong>
+                                當野生動物闖入雞舍或農地時，少數農民仍使用非法捕獸鋏或毒餌進行報復性獵捕，引發悲劇。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CRITICAL HIGHLIGHT BOX: Illegal Hunting is a threat faced by every species -->
+                <div class="alert-box glass-warning leaf-radius-1 reveal-on-scroll">
+                    <div class="alert-icon">
+                        <i data-lucide="shield-alert"></i>
+                    </div>
+                    <div class="alert-body">
+                        <h4>【關鍵事實：非法捕獵是所有瀕危物種的共同威脅】</h4>
+                        <p>非法捕獵與誤捕絕對不是個別物種的局部問題，而是<strong>所有瀕危物種皆面臨的共同威脅</strong>。無論是行走在林間的台灣黑熊與石虎、穿梭在金門池塘的歐亞水獺，抑或是越洋前來度冬的黑面琵鷺、高山溪流的櫻花鉤吻鮭，甚至是在西部沿海游泳的中華白海豚，皆有因非法陷阱、漁網糾纏、私自槍擊或盜獵捕撈而受傷殘廢甚至死亡的真實紀錄。杜絕非法陷阱與獵殺，是保護牠們的重中之重。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: REGULATIONS -->
+            <section id="section-regulations" class="content-section">
+                <div class="section-hero">
+                    <span class="badge danger-badge leaf-radius-1">Regulatory Aspects</span>
+                    <h2>強制紅線：國家法規規範</h2>
+                    <p class="hero-desc">法律是野生動物生存權的最後一道堅實防盾。我國透過《動物保護法》與《野生動物保育法》，劃定了人類活動的行為邊界與法律責任。</p>
+                </div>
+
+                <div class="regulations-container glass leaf-radius-1">
+                    <div class="category-hero-layout">
+                        <div class="category-img-side leaf-radius-1 reveal-on-scroll">
+                            <img src="image/法規篇.webp" alt="法規規範篇" class="category-cover-img">
+                        </div>
+                        <div class="category-info-side">
+                            <div class="column-header">
+                                <i data-lucide="scale"></i>
+                                <h3>法規規範三大核心</h3>
+                            </div>
+                            <p class="column-intro">落實我國動物保護法與野生動物保育法，從強制性與約束性層面保障野生及同伴動物的安全：</p>
+                            
+                            <div class="regulation-cards-list">
+                                <div class="action-card leaf-radius-1 reveal-on-scroll" id="idx-reg-owner">
+                                    <div class="card-title">
+                                        <span class="num">01</span>
+                                        <h4>飼主責任 (Owner Responsibility)</h4>
+                                    </div>
+                                    <p>依據《動物保護法》，飼主必須為寵物辦理登記、植入晶片，並落實絕育。不得任意棄養寵物。這不僅是道德義務，更能有效從源頭遏止流浪犬貓數量滋生，減少遊蕩貓犬對淺山石虎、金門水獺等瀕危野生動物的咬傷與疾病傳播風險。</p>
+                                </div>
+
+                                <div class="action-card leaf-radius-1 reveal-on-scroll" id="idx-reg-abuse">
+                                    <div class="card-title">
+                                        <span class="num">02</span>
+                                        <h4>嚴懲虐待 (Severe Punishment for Abuse)</h4>
+                                    </div>
+                                    <p>我國法律嚴禁對動物進行故意虐待、傷害、殘害或致其重傷死亡。觸犯者將面臨最高數年的有期徒刑並科百萬罰金；針對保育類野生動物的騷擾、虐待、非法獵捕或捕殺，處罰更加嚴厲，最重可處五年有期徒刑，以強制力捍衛生命權。</p>
+                                </div>
+
+                                <div class="action-card leaf-radius-1 reveal-on-scroll" id="idx-reg-industry">
+                                    <div class="card-title">
+                                        <span class="num">03</span>
+                                        <h4>產業管理 (Industry Management)</h4>
+                                    </div>
+                                    <p>對經營犬、貓等特定同伴動物繁殖、買賣、寄養之商業機構，實行嚴格的特許執照核發、定期動態評鑑與稽查制度。嚴厲取締無照非法繁殖場、非法寵物買賣，規範寵物產業秩序，切斷非法商品化鏈條。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: ACTIONS -->
+            <section id="section-actions" class="content-section">
+                <div class="section-hero">
+                    <span class="badge success-badge leaf-radius-1">Action Aspects</span>
+                    <h2>守護希望：社會實踐行動</h2>
+                    <p class="hero-desc">除了法律的制約，大眾在日常生活中的保育選擇，才是決定野生動物能否與我們共存的溫度計。每一個小選擇，都是對臺灣生態的實踐承諾。</p>
+                </div>
+
+                <div class="actions-container glass leaf-radius-2">
+                    <div class="category-hero-layout">
+                        <div class="category-info-side">
+                            <div class="column-header">
+                                <i data-lucide="heart-handshake"></i>
+                                <h3>社會實踐四大行動</h3>
+                            </div>
+                            <p class="column-intro">將生態友好的理念內化為具體的日常生活行為，讓每個人都成為保育的參與者：</p>
+                            
+                            <div class="regulation-cards-list">
+                                <div class="action-card leaf-radius-2" id="idx-act-adopt">
+                                    <div class="card-title">
+                                        <span class="num">01</span>
+                                        <h4>領養代替購買 (Adopt Don't Shop)</h4>
+                                    </div>
+                                    <p>優先選擇領養收容所或動保團體救援的流浪動物，減少商業購買。這能改善公立收容所壓力，且降低非法寵物買賣利潤，逐步減輕野外流浪動物造成的生態衝突。</p>
+                                </div>
+
+                                <div class="action-card leaf-radius-2" id="idx-act-report">
+                                    <div class="card-title">
+                                        <span class="num">02</span>
+                                        <h4>遇到虐待勇於舉報 (Report Abuse)</h4>
+                                    </div>
+                                    <p>在生活周遭、郊山或網路上，如發現有不法使用捕獸鋏、山豬吊陷阱，或者疑似虐待動物事件時，請保持警覺並立刻撥打「1959」動物保護專線舉報，以便動保員及時救援與收繳非法陷阱。</p>
+                                </div>
+
+                                <div class="action-card leaf-radius-2" id="idx-act-testing">
+                                    <div class="card-title">
+                                        <span class="num">03</span>
+                                        <h4>支持無動物實驗產品 (Cruelty-Free)</h4>
+                                    </div>
+                                    <p>購買日常清潔用品、化妝品時，選擇有「免受折磨（Leaping Bunny）」標章或標示 Cruelty-Free 的商品，反對為個人消費而讓動物承受非人道的化學實驗痛苦。</p>
+                                </div>
+
+                                <div class="action-card leaf-radius-2" id="idx-act-volunteer">
+                                    <div class="card-title">
+                                        <span class="num">04</span>
+                                        <h4>參與志工與捐款 (Volunteer & Donate)</h4>
+                                    </div>
+                                    <p>加入野生動物救傷團體、生態保育協會的志工行列；或定期定額捐款給具誠信的NGO，資助一線野外調查、生態棲地保育信託及受傷動物復健野放工作。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-img-side leaf-radius-2 reveal-on-scroll">
+                            <img src="image/行動篇.jpg" alt="實踐行動篇" class="category-cover-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commit Interactive Form -->
+                <div class="commit-section glass leaf-radius-1 reveal-on-scroll" id="idx-act-commit">
+                    <div class="commit-header">
+                        <i data-lucide="check-square" class="commit-icon"></i>
+                        <h3>我的保育承諾書</h3>
+                        <p>支持臺灣生態保育，你可以從勾選一項你願意在生活中落實的承諾開始：</p>
+                    </div>
+                    <form id="commit-form">
+                        <div class="checkbox-group">
+                            <label class="checkbox-container leaf-radius-1">
+                                <input type="checkbox" name="commit" value="領養代替購買">
+                                <span class="checkmark"></span>
+                                領養代替購買，不給非法繁殖場機會
+                            </label>
+                            <label class="checkbox-container leaf-radius-1">
+                                <input type="checkbox" name="commit" value="遇到虐待勇於舉報">
+                                <span class="checkmark"></span>
+                                發現捕獸夾或虐待動物，立刻撥打 1959 專線通報
+                            </label>
+                            <label class="checkbox-container leaf-radius-1">
+                                <input type="checkbox" name="commit" value="支持無動物實驗產品">
+                                <span class="checkmark"></span>
+                                消費時優先選擇無動物實驗（Cruelty-free）綠色產品
+                            </label>
+                            <label class="checkbox-container leaf-radius-1">
+                                <input type="checkbox" name="commit" value="參與志工與捐款">
+                                <span class="checkmark"></span>
+                                關注並以志工或捐款形式支持臺灣生態保育團體
+                            </label>
+                        </div>
+                        <button type="submit" class="btn submit-commit-btn leaf-radius-2">
+                            <span>送出我的保育承諾</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                    <div id="commit-success-msg" class="success-message hide leaf-radius-1">
+                        <i data-lucide="heart"></i>
+                        <p>感謝您的承諾！每一份微小的個人行動，都是推動臺灣生態永續發展的巨大力量。</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="app-footer glass">
+            <p>© 2026 為牠發聲—動物保育行動日. 旨在宣導野生動物保育法規與環境永續實踐。</p>
+            <p class="disclaimer">本網頁之所有保育資訊均經由學術研究與政府公開資訊查核編寫，請共同守護這片土地的野生居民。</p>
+            <p class="sources-footer-text"><a href="sources.html" class="sources-link"><i data-lucide="external-link"></i> 瀏覽本專題引用文獻與參考資料來源</a></p>
+        </footer>
+    </div>
+
+    <!-- 3. FLOATING CORNER CONTROLS (BOTTOM LEFT & RIGHT) -->
+    <button class="return-hub-btn-floating leaf-radius-2 hide" id="btn-return-hub-floating" aria-label="返回主題選擇">
+        <i data-lucide="arrow-left"></i>
+        <span>返回</span>
+    </button>
+
+    <button class="index-trigger-btn leaf-radius-1 hide" id="btn-toggle-index" aria-label="打開導覽目錄">
+        <i data-lucide="menu" id="index-btn-icon"></i>
+        <span>目錄</span>
+    </button>
+
+    <div class="index-drawer glass" id="index-drawer">
+        <div class="drawer-header">
+            <div class="drawer-project-title">
+                <h3>為牠發聲—動物保育行動日</h3>
+                <p>TAIWAN WILDLIFE CONSERVATION</p>
+            </div>
+            <button class="close-drawer-btn" id="btn-close-drawer" aria-label="關閉目錄"><i data-lucide="x"></i></button>
+        </div>
+        <div class="drawer-content">
+            <ul class="drawer-menu">
+                <!-- Section 1: Species -->
+                <li class="menu-section-title">
+                    <i data-lucide="leaf"></i> <span>瀕危物種</span>
+                </li>
+                <li><a href="#idx-species-cat" class="drawer-link" data-section="species">台灣石虎</a></li>
+                <li><a href="#idx-species-bear" class="drawer-link" data-section="species">台灣黑熊</a></li>
+                <li><a href="#idx-species-salmon" class="drawer-link" data-section="species">櫻花鉤吻鮭</a></li>
+                <li><a href="#idx-species-otter" class="drawer-link" data-section="species">歐亞水獺</a></li>
+                <li><a href="#idx-species-spoonbill" class="drawer-link" data-section="species">黑面琵鷺</a></li>
+                <li><a href="#idx-species-dolphin" class="drawer-link" data-section="species">中華白海豚</a></li>
+
+                <!-- Section 2: Threats -->
+                <li class="menu-section-title">
+                    <i data-lucide="skull"></i> <span>生存威脅</span>
+                </li>
+                <li><a href="#idx-threats-habitat" class="drawer-link" data-section="threats">棲地破壞與破碎化</a></li>
+                <li><a href="#idx-threats-hunting" class="drawer-link" data-section="threats">非法捕獵與誤捕</a></li>
+
+                <!-- Section 3: Regulations -->
+                <li class="menu-section-title">
+                    <i data-lucide="scale"></i> <span>法規規範</span>
+                </li>
+                <li><a href="#idx-reg-owner" class="drawer-link" data-section="regulations">飼主責任</a></li>
+                <li><a href="#idx-reg-abuse" class="drawer-link" data-section="regulations">嚴懲虐待</a></li>
+                <li><a href="#idx-reg-industry" class="drawer-link" data-section="regulations">產業管理</a></li>
+
+                <!-- Section 4: Actions -->
+                <li class="menu-section-title">
+                    <i data-lucide="heart-handshake"></i> <span>實踐行動</span>
+                </li>
+                <li><a href="#idx-act-adopt" class="drawer-link" data-section="actions">領養代替購買</a></li>
+                <li><a href="#idx-act-report" class="drawer-link" data-section="actions">遇到虐待舉報</a></li>
+                <li><a href="#idx-act-testing" class="drawer-link" data-section="actions">無動物實驗產品</a></li>
+                <li><a href="#idx-act-volunteer" class="drawer-link" data-section="actions">參與志工捐款</a></li>
+                <li><a href="#idx-act-commit" class="drawer-link" data-section="actions">我的保育承諾</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JavaScript Loader -->
+    <script src="app.js" defer></script>
+</body>
+</html>
